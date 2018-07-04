@@ -1,0 +1,17 @@
+.navigation a
+{
+    margin: 0 1em;
+    align-content: center;
+} 
+
+mat-stroked-button {
+    background-color: aliceblue;
+}
+
+mat-toolbar {
+    background-color: snow;
+}
+
+.container {
+    padding: 0 1.2em;
+}

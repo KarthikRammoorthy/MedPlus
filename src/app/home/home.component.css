@@ -1,0 +1,25 @@
+.container {
+    padding: 0 1.2em;
+    margin: auto;
+    margin-top: 2em;
+
+}
+
+.content-text {
+    column-count: 3;
+}
+
+
+@media (max-width: 768px) {
+
+    .content-text {
+        column-count: 1;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+
+    .content-text {
+        column-count: 2;
+    }
+}

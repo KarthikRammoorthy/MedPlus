@@ -1,0 +1,15 @@
+.container {
+    padding: 0 1.2em;
+    margin: auto;
+    margin-top: 2em;
+    background-color:snow;
+  }
+
+
+.mat-card-header {
+  justify-content: center;
+}
+
+mat-card {
+  background-color: aliceblue;
+}

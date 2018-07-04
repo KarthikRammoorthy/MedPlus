@@ -1,0 +1,52 @@
+<div class="container" fxLayout ="column" fxLayoutGap = "5px">
+    <mat-card  *ngFor="let order of Orders">
+        <mat-card-header>
+          <mat-card-title class="example-card"> {{order.name}}</mat-card-title>
+          <mat-card-subtitle>Order Number : {{order.ordernumber}}</mat-card-subtitle>
+        </mat-card-header>
+       
+        <mat-card-content fxLayout ="row" fxLayout.xs ="column" fxLayoutGap="5px">
+          <span fxFlex="33%" fxFlex.xs ="100%">
+          Order Date : {{order.orderdate}}
+          </span>
+          <span fxFlex="33%" fxFlex.xs ="100%"> 
+          Price: {{order.price}}
+          </span>
+          <span fxFlex="33%" fxFlex.xs ="100%">
+            Quantity : {{order.quantity}}
+          </span>
+        </mat-card-content>
+        <mat-card-actions fxLayout ="row" fxLayout.xs ="column" fxLayoutGap="5px">
+            <span fxFlex="25%" fxFlex.xs ="100%">
+          <button mat-stroked-button> Feedback
+          <mat-icon>
+              feedback           
+          </mat-icon>  
+          </button>
+          </span>
+          <span fxFlex="25%" fxFlex.xs ="100%">
+              <button mat-stroked-button> Product Info
+              <mat-icon>
+                  info             
+              </mat-icon>  
+              </button>
+              </span>
+              <span fxFlex="25%" fxFlex.xs ="100%">
+                  <button mat-stroked-button> Add To Cart
+                  <mat-icon>
+                      add_shopping_cart             
+                  </mat-icon>  
+                  </button>
+                  </span>
+                  <span fxFlex="25%" fxFlex.xs ="100%">
+                      <button mat-stroked-button> Delete
+                      <mat-icon>
+                          delete             
+                      </mat-icon>  
+                      </button>
+                      </span>
+
+        </mat-card-actions>
+      </mat-card>
+      
+    </div>
