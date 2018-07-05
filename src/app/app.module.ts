@@ -20,6 +20,7 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ProductComponent } from './product/product.component';
 import { AddToCartComponent} from './add-to-cart/add-to-cart.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { AddToCartComponent} from './add-to-cart/add-to-cart.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
