@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 //import { FormGroup , FormControl } from '@angular/forms';
 import { AbstractControl, FormGroupDirective, FormBuilder, FormControl, Validators ,FormsModule,NgForm, FormGroup } from '@angular/forms';
 import { RegistrationValidator } from '../register/register.validator';
+import {  Router, NavigationEnd } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,10 @@ import { RegistrationValidator } from '../register/register.validator';
 
 export class RegisterComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder) { 
+  navigationSubscription;
+
+  //constructor(private formBuilder: FormBuilder, private router: Router) { 
+    constructor(private formBuilder: FormBuilder) { 
     this.passwordGroup = this.formBuilder.group({
       password: ['', Validators.required],
       reenterpassword: ['', Validators.required]
@@ -31,11 +35,22 @@ export class RegisterComponent implements OnInit {
       passwordGroup: this.passwordGroup
         
     });
+
+    //this.navigationSubscription = this.router.events.subscribe((e: any) => {
+      // If it is a NavigationEnd event re-initalise the component
+      //if (e instanceof NavigationEnd) {
+        //this.initialiseInvites();
+      //}
+    //});
   }
 
   registerForm: FormGroup;
   passwordGroup: FormGroup;
   unamePattern = "/^[a-zA-Z\s]*$"; 
+
+  initialiseInvites() {
+    // Set default values and re-fetch any data you need.
+  }
 
 ngOnInit() {}
 
