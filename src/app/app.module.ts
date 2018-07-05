@@ -19,6 +19,7 @@ import {ErrorStateMatcher, ShowOnDirtyErrorStateMatcher} from '@angular/material
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ProductComponent } from './product/product.component';
+import { AddToCartComponent} from './add-to-cart/add-to-cart.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ProductComponent } from './product/product.component';
     RegisterComponent,
     OrderHistoryComponent,
     NavigationComponent,
-    ProductComponent
+    ProductComponent,
+    AddToCartComponent
   ],
   imports: [
     BrowserModule,

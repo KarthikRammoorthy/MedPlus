@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import {ProductComponent} from './product/product.component';
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -13,7 +14,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent, runGuardsAndResolvers: 'always' },
   { path: 'orderhistory', component: OrderHistoryComponent, runGuardsAndResolvers: 'always' },
   {path: 'product', component: ProductComponent}
-
+  {path: 'cart', component: AddToCartComponent}
 ];
 
 @NgModule({
