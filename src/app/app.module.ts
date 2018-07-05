@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ErrorStateMatcher, ShowOnDirtyErrorStateMatcher} from '@angular/material/core';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     HomeCardComponent,
     RegisterComponent,
     OrderHistoryComponent,
-    NavigationComponent
+    NavigationComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
