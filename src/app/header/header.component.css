@@ -13,7 +13,7 @@
     object-fit: fill;
 }
 
-#header 
+#header
 {
     text-align: center;
     color: #003366;
@@ -28,7 +28,44 @@
 
 .container h1 {
     padding-top: 150px;
-    
+
 }
+
+
+.navbar-expand-md{
+  width: 100%;
+  background-color: #6799a3;
+}
+.nav-item {
+  margin-left: 30%;
+  /* margin-top: 10%; */
+  width: 45%
+}
+
+.form-control{
+  margin-left: 30%;
+  width: 35%;
+}
+.icon-bar {
+  width: 90px;
+  margin-left: 5%;
+  width: 20%;
+  /* Set a specific width */
+}
+
+.icon-bar a {
+  margin-left:20%;
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font-size */
+}
+
+.icon-bar a:hover {
+  background-color: rgb(159, 219, 48); /* Add a hover color */
+}
+
+
+
+
 
 

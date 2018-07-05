@@ -13,8 +13,10 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, runGuardsAndResolvers: 'always' },
   { path: 'register', component: RegisterComponent, runGuardsAndResolvers: 'always' },
   { path: 'orderhistory', component: OrderHistoryComponent, runGuardsAndResolvers: 'always' },
-  {path: 'product', component: ProductComponent}
-  {path: 'cart', component: AddToCartComponent}
+  {path: 'product', component: ProductComponent},
+  {path: 'cart', component: AddToCartComponent},
+  {path: 'login', component: LoginComponent}
+
 ];
 
 @NgModule({

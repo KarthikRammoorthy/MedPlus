@@ -2,5 +2,25 @@
     margin: auto;
     margin-top: 2em;
     padding: 1em 3em;
-   
+
+}
+
+.footerInfo {
+  max-width: 30%;
+  padding: 0 4px;
+  display: inline-block;
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 8%;
+  cursor: pointer;
+  border-color: solid blue;
+}
+
+.footerInfo p{
+  margin-top: 8%;
+}
+.footerDiv{
+  background:url(/assets/images/footer.png);
+  border: solid #D3D3D3;
 }
