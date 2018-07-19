@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 //import { FormGroup , FormControl } from '@angular/forms';
 import { AbstractControl, FormGroupDirective, FormBuilder, FormControl, Validators ,FormsModule,NgForm, FormGroup } from '@angular/forms';
 import { RegistrationValidator } from '../register/register.validator';
+
 import { RestService } from '../rest.service';
+
 
 
 @Component({
@@ -14,6 +16,7 @@ import { RestService } from '../rest.service';
 
 export class RegisterComponent implements OnInit {
 
+
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
   //passwordPattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
   passwordPattern = "^[a-zA-Z0-9?=.*?[#?!@$%^&*-]{8,}$$";
@@ -22,6 +25,49 @@ export class RegisterComponent implements OnInit {
   zipcodePattern = "[ABCEGHJKLMNPRSTVXY abceghjklmnprstvxy][0-9][ABCEGHJKLMNPRSTVWXYZ abceghjklmnprstvxy] ?[0-9][ABCEGHJKLMNPRSTVWXYZ abceghjklmnprstvxy][0-9]"
   registerForm: FormGroup;
   passwordGroup: FormGroup;
+
+
+  //constructor(private formBuilder: FormBuilder, private router: Router) { 
+    constructor(private formBuilder: FormBuilder) { 
+    this.passwordGroup = this.formBuilder.group({
+      password: ['', Validators.required],
+      reenterpassword: ['', Validators.required]
+    }, {
+      validator: RegistrationValidator.validate.bind(this)
+    });
+    this.registerForm = this.formBuilder.group({
+      firstname : ['',Validators.required],
+      lastname : ['',Validators.required],
+      emailid : ['',Validators.required],
+      suite : ['',Validators.required],
+      street : ['',Validators.required],
+      city : ['',Validators.required],
+      zip : ['',Validators.required],
+      passwordGroup: this.passwordGroup
+        
+    });
+
+    //this.navigationSubscription = this.router.events.subscribe((e: any) => {
+      // If it is a NavigationEnd event re-initalise the component
+      //if (e instanceof NavigationEnd) {
+        //this.initialiseInvites();
+      //}
+    //});
+  }
+
+
+
+ngOnInit() {}
+
+  /*this.registerForm = new FormGroup({
+    firstname : new FormControl('', [Validators.required, Validators.pattern(this.unamePattern)]),
+    lastname : new FormControl('', [Validators.required, Validators.pattern(this.unamePattern)]),
+    emailid : new FormControl('', [Validators.required, Validators.email]),
+    password : new FormControl('', [Validators.required, Validators.minLength(8)]),
+    reenterpassword : new FormControl('', [Validators.required, Validators.pattern(this.unamePattern)]),
+    suite : new FormControl('', [Validators.required]),
+});
+
   
 
   constructor(private formBuilder: FormBuilder, private restService: RestService) { }
