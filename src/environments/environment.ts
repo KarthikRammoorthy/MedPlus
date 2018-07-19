@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  "InsertUrl":'http://localhost:8080/MedPlus/user'
 };
 
 /*
@@ -13,3 +14,5 @@ export const environment = {
  * because it will have performance impact when throw error
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+//"InsertUrl":'https://medplusapi.herokuapp.com/MedPlus/user'

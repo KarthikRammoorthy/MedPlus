@@ -21,6 +21,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ProductComponent } from './product/product.component';
 import { AddToCartComponent} from './add-to-cart/add-to-cart.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     FlexLayoutModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot()
