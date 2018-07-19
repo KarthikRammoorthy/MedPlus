@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 //import { FormGroup , FormControl } from '@angular/forms';
 import { AbstractControl, FormGroupDirective, FormBuilder, FormControl, Validators ,FormsModule,NgForm, FormGroup } from '@angular/forms';
 import { RegistrationValidator } from '../register/register.validator';
-
 import { RestService } from '../rest.service';
 
 
@@ -120,6 +119,5 @@ this.restService.createUser(user).subscribe((response) => {
 }
   
 
-  
-
-
+  */
+}
