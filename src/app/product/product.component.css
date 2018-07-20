@@ -1,0 +1,38 @@
+.prodcut-heading{
+  font-size: 3vw
+}
+
+.product-desc{
+  font-size: 2vmin
+}
+
+.product-price{
+  width: 2vw
+}
+
+.reviews{
+  margin-left: 3%; width: 90%
+}
+
+.review-heading{
+  font-size: 2vw
+}
+
+.hr-css{
+  width: 100%
+}
+
+.reviewer{
+  font-size: 2vw
+}
+
+.review-desc{
+  font-size: 2vmin; width: 60%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+}
