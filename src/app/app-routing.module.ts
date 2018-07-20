@@ -8,8 +8,8 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 
 import {ProductComponent} from './product/product.component';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
-
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import {CheckoutComponent} from './checkout/checkout.component';
 
 
 const routes: Routes = [
@@ -19,14 +19,14 @@ const routes: Routes = [
   { path: 'orderhistory', component: OrderHistoryComponent, runGuardsAndResolvers: 'always' },
   {path: 'product', component: ProductComponent},
   {path: 'cart', component: AddToCartComponent},
-  {path: 'login', component: LoginComponent}
-
+  {path: 'login', component: LoginComponent},
+  {path: 'product/buy', component: CheckoutComponent}
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    //RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})
+     // RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})
     RouterModule.forRoot(routes, {useHash: true})
   ],
   exports: [ RouterModule ],

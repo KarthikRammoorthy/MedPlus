@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  "InsertUrl":'http://localhost:8080/MedPlus/user'
+  'InsertUrl': 'http://localhost:8080/MedPlus/user',
+  'LoginUrl': 'http://localhost:8080/MedPlus/login',
+  'buyProductURL': 'http://localhost:8080/MedPlus/buynow',
+  'loadCartURL': 'http://localhost:8080/MedPlus/checkout'
 };
 
 /*
