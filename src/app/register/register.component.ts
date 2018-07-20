@@ -26,46 +26,10 @@ export class RegisterComponent implements OnInit {
   passwordGroup: FormGroup;
 
 
-  //constructor(private formBuilder: FormBuilder, private router: Router) { 
-    constructor(private formBuilder: FormBuilder) { 
-    this.passwordGroup = this.formBuilder.group({
-      password: ['', Validators.required],
-      reenterpassword: ['', Validators.required]
-    }, {
-      validator: RegistrationValidator.validate.bind(this)
-    });
-    this.registerForm = this.formBuilder.group({
-      firstname : ['',Validators.required],
-      lastname : ['',Validators.required],
-      emailid : ['',Validators.required],
-      suite : ['',Validators.required],
-      street : ['',Validators.required],
-      city : ['',Validators.required],
-      zip : ['',Validators.required],
-      passwordGroup: this.passwordGroup
-        
-    });
-
-    //this.navigationSubscription = this.router.events.subscribe((e: any) => {
-      // If it is a NavigationEnd event re-initalise the component
-      //if (e instanceof NavigationEnd) {
-        //this.initialiseInvites();
-      //}
-    //});
-  }
+  
 
 
 
-ngOnInit() {}
-
-  /*this.registerForm = new FormGroup({
-    firstname : new FormControl('', [Validators.required, Validators.pattern(this.unamePattern)]),
-    lastname : new FormControl('', [Validators.required, Validators.pattern(this.unamePattern)]),
-    emailid : new FormControl('', [Validators.required, Validators.email]),
-    password : new FormControl('', [Validators.required, Validators.minLength(8)]),
-    reenterpassword : new FormControl('', [Validators.required, Validators.pattern(this.unamePattern)]),
-    suite : new FormControl('', [Validators.required]),
-});
 
   
 
@@ -119,5 +83,4 @@ this.restService.createUser(user).subscribe((response) => {
 }
   
 
-  */
-}
+  
