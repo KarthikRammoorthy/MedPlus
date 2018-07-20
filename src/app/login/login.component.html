@@ -5,7 +5,7 @@
   </div>
   <!-- Default input email -->
   <div class="login">
-    <form action= "https://web.cs.dal.ca/~karthick/csci5709/a2/index.html">
+    <form (ngSubmit)="login()">
       <div class="form-group row" style="margin-top: 4%;margin-left: 15%;">
         <label class="col-1 col-form-label">Name</label>
         <input class="form-control" type="text" maxlength="6" id="name" pattern="[^[A-Za-z]+$]{1,6}" title="Only letters allowed" required>

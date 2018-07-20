@@ -1,14 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './material.module';
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { CarouselComponent } from './carousel/carousel.component';
@@ -21,6 +21,10 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ProductComponent } from './product/product.component';
 import { AddToCartComponent} from './add-to-cart/add-to-cart.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { HttpClientModule} from '@angular/common/http';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { ProductModule } from './product/product.module';
+
 
 
 @NgModule({
@@ -37,7 +41,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     OrderHistoryComponent,
     NavigationComponent,
     ProductComponent,
-    AddToCartComponent
+    AddToCartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -46,9 +51,11 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     FlexLayoutModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    ProductModule
   ],
   providers: [],
   bootstrap: [AppComponent]
