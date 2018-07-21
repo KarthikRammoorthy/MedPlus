@@ -24,6 +24,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { HttpClientModule} from '@angular/common/http';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ProductModule } from './product/product.module';
+import { SearchresultComponent } from './searchresult/searchresult.component';
 
 
 
@@ -42,7 +43,8 @@ import { ProductModule } from './product/product.module';
     NavigationComponent,
     ProductComponent,
     AddToCartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    SearchresultComponent
   ],
   imports: [
     BrowserModule,

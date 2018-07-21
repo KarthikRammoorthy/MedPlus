@@ -7,7 +7,8 @@ export const environment = {
   'InsertUrl': 'http://localhost:8080/MedPlus/user',
   'LoginUrl': 'http://localhost:8080/MedPlus/login',
   'buyProductURL': 'http://localhost:8080/MedPlus/buynow',
-  'loadCartURL': 'http://localhost:8080/MedPlus/checkout'
+  'loadCartURL': 'http://localhost:8080/MedPlus/checkout',
+  'searchProductURL': 'http://localhost:8080/MedPlus/productsearch',
 };
 
 /*

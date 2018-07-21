@@ -12,11 +12,10 @@
     <a class="navbar-brand" href="#">Med +</a>
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <form class="form-inline my-2 my-lg-0" action="/searchresultpage">
-        <input class="form-control mr-sm-2" type="search"
-          placeholder="Search" id="searchmovie" aria-label="Search">
-        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"
-          id="search">Search</button>
+      <form class="form-inline my-2 my-lg-0" (ngSubmit) = "doSearch()" ngNativeValidate>
+        <input class="form-control mr-sm-2" type="search" [(ngModel)]= "searchterm" name ="searchterm"
+          placeholder="Search"  aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
       </form>
 
       <ul class="navbar-nav float-left">

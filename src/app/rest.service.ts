@@ -12,6 +12,7 @@ export class RestService {
   LoginUrl = environment.LoginUrl;
   buyProductURL = environment.buyProductURL;
   loadCartURL = environment.loadCartURL;
+  searchProductURL = environment.searchProductURL;
   constructor(private  httpClient:  HttpClient) { }
 
   createUser(user){
@@ -31,4 +32,11 @@ export class RestService {
   loadCart(id) {
     return  this.httpClient.get(`${this.loadCartURL}` + '/' + id);
   }
+
+  getProductByName(searchterm){
+
+    return this.httpClient.get(`${this.searchProductURL}/${searchterm}`);
+  
+  }
+  
 }

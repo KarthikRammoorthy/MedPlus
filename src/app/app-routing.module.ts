@@ -10,6 +10,7 @@ import {ProductComponent} from './product/product.component';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {CheckoutComponent} from './checkout/checkout.component';
+import {SearchresultComponent} from './searchresult/searchresult.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: 'product', component: ProductComponent},
   {path: 'cart', component: AddToCartComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'product/buy', component: CheckoutComponent}
+  {path: 'product/buy', component: CheckoutComponent},
+  {path: 'searchresult', component: SearchresultComponent}
 ];
 
 @NgModule({
