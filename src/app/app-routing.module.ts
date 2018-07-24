@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, runGuardsAndResolvers: 'always' },
   { path: 'register', component: RegisterComponent, runGuardsAndResolvers: 'always' },
-  { path: 'orderhistory', component: OrderHistoryComponent, runGuardsAndResolvers: 'always' },
+  { path: 'orderhistory', component: OrderHistoryComponent },
   {path: 'product', component: ProductComponent},
   {path: 'cart', component: AddToCartComponent},
   {path: 'login', component: LoginComponent},

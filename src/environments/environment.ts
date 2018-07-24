@@ -9,6 +9,7 @@ export const environment = {
   'buyProductURL': 'http://localhost:8080/MedPlus/buynow',
   'loadCartURL': 'http://localhost:8080/MedPlus/checkout',
   'searchProductURL': 'http://localhost:8080/MedPlus/productsearch',
+  'orderhistoryURL': 'http://localhost:8080/MedPlus/orderhistory',
 };
 
 /*

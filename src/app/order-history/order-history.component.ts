@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from '../rest.service';
 
 @Component({
   selector: 'app-order-history',
@@ -7,16 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderHistoryComponent implements OnInit {
 
- Orders = [
-    {id: 1, name:'Paracetamol', orderdate:'12 January 2018', ordernumber:'12341dskjfn123', quantity: 10, price:'$122'},
-    {id: 1, name:'Volini', orderdate:'12 January 2018', ordernumber:'12341dskjfn123', quantity: 10, price:'$122'},
-    {id: 1, name:'Paracetamol', orderdate:'12 January 2018', ordernumber:'12341dskjfn123', quantity: 10, price:'$122'},
-    {id: 1, name:'Paracetamol', orderdate:'12 January 2018', ordernumber:'12341dskjfn123', quantity: 10, price:'$122'},
-    {id: 1, name:'Paracetamol', orderdate:'12 January 2018', ordernumber:'12341dskjfn123', quantity: 10, price:'$122'}
-];
-  constructor() { }
+  private userid:  String =  "1";
+  listOrderHistory: any;
+
+
+  constructor(private  restService:  RestService) { 
+    this.displayOrderHistory();
+  }
+
 
   ngOnInit() {
   }
+
+  displayOrderHistory() {
+    this.restService.getOrderHistory(this.userid).subscribe((response:Response) => {
+
+      this.listOrderHistory = response;
+
+  });
+
+}
 
 }

@@ -13,6 +13,8 @@ export class RestService {
   buyProductURL = environment.buyProductURL;
   loadCartURL = environment.loadCartURL;
   searchProductURL = environment.searchProductURL;
+  orderhistoryURL = environment.orderhistoryURL;
+
   constructor(private  httpClient:  HttpClient) { }
 
   createUser(user){
@@ -37,6 +39,10 @@ export class RestService {
 
     return this.httpClient.get(`${this.searchProductURL}/${searchterm}`);
   
+  }
+
+  getOrderHistory(id){
+    return this.httpClient.get(`${this.orderhistoryURL}/${id}`);
   }
   
 }
