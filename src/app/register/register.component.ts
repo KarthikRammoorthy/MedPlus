@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormGroupDirective, FormBuilder, FormControl, Validators ,FormsModule,NgForm, FormGroup } from '@angular/forms';
 import { RegistrationValidator } from '../register/register.validator';
 import { RestService } from '../rest.service';
+import { Router } from '@angular/router';
 
 
 
@@ -33,7 +34,7 @@ export class RegisterComponent implements OnInit {
 
   
 
-  constructor(private formBuilder: FormBuilder, private restService: RestService) { }
+  constructor(private formBuilder: FormBuilder, private restService: RestService, private router: Router) { }
 
 
 
@@ -78,6 +79,9 @@ var user = {
 }
 this.restService.createUser(user).subscribe((response) => {
   console.log(response);
+  alert("Registration Successful");
+    this.router.navigate(['home']);
+  
 });
 }
 }

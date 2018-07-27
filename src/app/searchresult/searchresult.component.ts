@@ -32,7 +32,7 @@ export class SearchresultComponent implements OnInit {
     
      
       this.router.navigate(['home']);
-      alert("No values returned.");
+      alert("No Products found by this name/category.");
       }
 
   });
