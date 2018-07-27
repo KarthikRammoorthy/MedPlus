@@ -1,80 +1,108 @@
-
-
 <html>
-  <head>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-    body{
-    
-    font-family: 'Raleway', 'Arial';
-    color: #000;
-    }
 
-    .fa {
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Checkout</title>
+</head>
 
-font-size: 3vw;
-}
+<body>
+  <div class="table-responsive">
+    <table class="table" style="width: 90%; margin-left: 5%">
+      <thead>
+        <tr>
 
-.fa:hover {
-  opacity: 0.7;
-}
+          <th style="width:20%">Product</th>
+          <th> Details</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th></th>
 
-.fa-facebook {
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of listProducts">
+          <td>
+            <img src={{product.product.productImage}}>
+          </td>
+          <td>
+            <p style="font-size: 2vmax">{{product.product.productName}}</p>
+          </td>
+          <td style="font-size: 2vmax">{{product.product.productQuantity}}</td>
+          <td style="font-size: 2vmax">$ {{product.product.productPrice}}</td>
+          <td>
+            <button class="btn btn-outline-danger" (click)="delete($event)" id="{{product.id}}"> Delete </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-color: white;
-}
-
-.fa-twitter {
-color: white;
-}
-
-.fa-instagram {
-color: white;
-}
-.fa-linkedin {
-color: white;
-}
-
-img{
-  width: 50%; 
-  height:auto;
-}
-.half{
-  width: 50%;
-}
-.checked {
-    color: orange;
-}
-    </style>
-  </head>
-  <body>
-      <div class="table-responsive">
-          <table class="table" style="width: 90%; margin-left: 5%">
-            <thead>
-                  <tr>
-                    
-                    <th style="width:20%">Product</th>
-                    <th> Details</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th></th>
-                  
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><img [src]="aspirin"></td>
-                    <td><p style="font-size: 2vmax">Aspirin <br>$50</p></td>
-                    <td style="font-size: 2vmax">1</td>
-                    <td style="font-size: 2vmax">$50</td>
-                  </tr>
-                </tbody>
-          </table>
+  <div class="information" style="margin-left: 10%">
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Address</h2>
+        <div class="card" style="width: 40vw;">
+        <div class="row">
+            <div class="card-body">
+          <div class="col-sm-12 card-text">
+            <label> {{user.user_suite}} - {{user.user_street}} </label>
+          </div>
+          <div class="col-sm-12 card-text">
+            <label> {{user.user_city}} </label>
+          </div>
+          <div class="col-sm-12 card-text">
+            <label> {{user.user_state}}  </label>
+          </div>
+          <div class="col-sm-12 card-text">
+            <label> {{user.user_country}} </label>
+          </div>
+          <div class="col-sm-12 card-text">
+            <label> {{user.user_zip}} </label>
+          </div>
+          </div>
         </div>
-        <hr>
-        <br><br>
-       
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h2>Payment Information</h2>
+        <form fxLayout="column" [formGroup]="paymentForm" (ngSubmit)="onFormSubmit()">
+          <mat-form-field>
+            <input matInput placeholder="Enter 16 digit card number" formControlName="cardNumber" required>
+
+          </mat-form-field>
+          <div class="row">
+            <div class="col-lg-3">
+              <mat-form-field>
+                <input matInput placeholder="expiry date" formControlName="expiryDate" required>
+
+              </mat-form-field>
+            </div>
+            <div class="col-lg-3" style="margin-left: 5%">
+              <mat-form-field>
+                <input matInput placeholder="security number" formControlName="cvv" required>
+
+              </mat-form-field>
+            </div>
+          </div>
+          <mat-form-field>
+            <input matInput placeholder="CardHolder Name" formControlName="name" required>
+
+          </mat-form-field>
+          <div class="float-right">
+              <button type="submit" id="add" class="btn btn-primary float-right">Place Order</button>
+            </div>
+        </form>
+        
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <br>
+  <br>
 
 
-  </body>
+
+</body>
+
 </html>

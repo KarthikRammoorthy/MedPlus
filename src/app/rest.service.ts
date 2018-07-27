@@ -12,6 +12,10 @@ export class RestService {
   LoginUrl = environment.LoginUrl;
   buyProductURL = environment.buyProductURL;
   loadCartURL = environment.loadCartURL;
+  deletecartitemURL = environment.deletecartitemURL;
+  loadUser = environment.loadUser;
+  orderUpdate = environment.orderUpdate;
+
   constructor(private  httpClient:  HttpClient) { }
 
   createUser(user){
@@ -30,5 +34,18 @@ export class RestService {
 
   loadCart(id) {
     return  this.httpClient.get(`${this.loadCartURL}` + '/' + id);
+  }
+
+  deleteItemFromCart(id) {
+    return this.httpClient.delete(`${this.deletecartitemURL}` + '/' + id);
+  }
+
+  loadUserDetails(id) {
+    return this.httpClient.get(`${this.loadUser}` + '/' + id);
+  }
+
+  orderUpdateFunct(obj){
+    const headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
+    return this.httpClient.post(`${this.orderUpdate}`, obj, {headers: headers});
   }
 }
