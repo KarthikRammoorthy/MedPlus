@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import { RestService } from '../rest.service';
-import {ProductModule} from './product.module';
+
 
 
 @Component({
@@ -12,7 +12,7 @@ import {ProductModule} from './product.module';
 export class ProductComponent implements OnInit {
 
   productId: String;
-  listProducts: any;
+
 
   constructor(private route: ActivatedRoute, private restService: RestService) {
     // this.productId = this.route.snapshot.params.param1;
@@ -31,9 +31,9 @@ export class ProductComponent implements OnInit {
       'userId': '1'
     };
     console.log(obj);
-
+    
     this.restService.buyProduct(obj).subscribe((response) => {
-      this.listProducts = response;
+      alert(response);
     });
   }
 }

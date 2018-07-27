@@ -1,43 +1,41 @@
-.product{
-    height: 50%;
-    width: 55%
+body{
+    
+  font-family: 'Raleway', 'Arial';
+  color: #000;
+  }
+
+  .fa {
+
+font-size: 3vw;
 }
 
-.prodcut-heading{
-  font-size: 3vw
+.fa:hover {
+opacity: 0.7;
 }
 
-.product-desc{
-  font-size: 2vmin
+.fa-facebook {
+
+color: white;
 }
 
-.product-price{
-  width: 2vw
+.fa-twitter {
+color: white;
 }
 
-.reviews{
-  margin-left: 3%; width: 90%
+.fa-instagram {
+color: white;
+}
+.fa-linkedin {
+color: white;
 }
 
-.review-heading{
-  font-size: 2vw
+img{
+width: 50%; 
+height:auto;
 }
-
-.hr-css{
-  width: 100%
+.half{
+width: 50%;
 }
-
-.reviewer{
-  font-size: 2vw
-}
-
-.review-desc{
-  font-size: 2vmin; width: 60%;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-
+.checked {
+  color: orange;
 }

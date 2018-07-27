@@ -14,6 +14,7 @@ export class RestService {
   loadCartURL = environment.loadCartURL;
   searchProductURL = environment.searchProductURL;
   orderhistoryURL = environment.orderhistoryURL;
+  
 
   constructor(private  httpClient:  HttpClient) { }
 
