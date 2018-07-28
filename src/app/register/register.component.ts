@@ -26,12 +26,12 @@ export class RegisterComponent implements OnInit {
   passwordGroup: FormGroup;
 
 
-  
 
 
 
 
-  
+
+
 
   constructor(private formBuilder: FormBuilder, private restService: RestService) { }
 
@@ -39,7 +39,7 @@ export class RegisterComponent implements OnInit {
 
 
 ngOnInit() {
-    
+
   this.passwordGroup = this.formBuilder.group({
     password: ['', Validators.required],
     reenterpassword: ['', Validators.required]
@@ -49,7 +49,7 @@ ngOnInit() {
   this.registerForm = this.formBuilder.group({
     firstname : ['',Validators.required],
     lastname : ['',Validators.required],
-    emailid : ['',[Validators.required , Validators.pattern(this.emailPattern)]],  
+    emailid : ['',[Validators.required , Validators.pattern(this.emailPattern)]],
     phone : ['',[Validators.required , Validators.pattern(this.phonePattern)]],
     suite : ['',[Validators.required , Validators.pattern(this.suitePattern)]],
     street : ['',Validators.required],
@@ -58,7 +58,7 @@ ngOnInit() {
     country : ['',Validators.required],
     zip : ['',[Validators.required , Validators.pattern(this.zipcodePattern)]],
     passwordGroup: this.passwordGroup
-      
+
   });
 }
 
@@ -76,11 +76,9 @@ var user = {
   user_country: this.registerForm.get('country').value,
   user_zip: this.registerForm.get('zip').value
 }
-this.restService.createUser(user).subscribe((response) => {
-  console.log(response);
-});
-}
-}
-  
 
-  
+}
+}
+
+
+

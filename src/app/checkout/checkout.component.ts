@@ -20,17 +20,19 @@ export class CheckoutComponent implements OnInit {
     this.loadCart(1);
     this.loadUserAddress(1);
     this.paymentForm = new FormGroup({
-      cardNumber: new FormControl(),
-        expiryDate: new FormControl(),
-      cvv: new FormControl(),
-      name: new FormControl(),
+      cardNumber: new FormControl('', [Validators.required,
+        Validators.pattern('^[0-9]{16}$')]),
+        expiryDate: new FormControl('', [Validators.required]),
+      cvv: new FormControl('', [Validators.required,
+        Validators.pattern('^[0-9]{3}$')]),
+      name: new FormControl('', [Validators.required,
+        Validators.pattern('^[a-z A-Z]+$')]),
     });
   }
 
 loadCart(id) {
   this.restService.loadCart(id).subscribe((response) => {
     this.listProducts = response;
-    console.log(this.listProducts);
   });
 }
 
@@ -38,6 +40,7 @@ loadUserAddress(id) {
   this.restService.loadUserDetails(id).subscribe((response) => {
     this.user = response;
   });
+  this.loadCart(1);
 }
 
 delete(event) {
@@ -52,9 +55,15 @@ onFormSubmit() {
     'listProducts': this.listProducts,
     'userId': '1'
   };
-  this.restService.orderUpdateFunct(obj).subscribe((response) => {
-    console.log(response);
-  });
+
+  if (this.listProducts.length === 0) {
+    alert('No product present in Cart');
+  } else {
+    this.restService.orderUpdateFunct(obj).subscribe((response) => {
+      this.loadCart(1);
+      alert('Order placed succesfully');
+    });
+  }
 }
 
 }

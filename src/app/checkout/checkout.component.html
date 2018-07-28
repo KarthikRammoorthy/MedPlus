@@ -42,25 +42,25 @@
       <div class="col-sm-6">
         <h2>Address</h2>
         <div class="card" style="width: 40vw;">
-        <div class="row">
+          <div class="row">
             <div class="card-body">
-          <div class="col-sm-12 card-text">
-            <label> {{user.user_suite}} - {{user.user_street}} </label>
+              <div class="col-sm-12 card-text">
+                <label> {{user.user_suite}} - {{user.user_street}} </label>
+              </div>
+              <div class="col-sm-12 card-text">
+                <label> {{user.user_city}} </label>
+              </div>
+              <div class="col-sm-12 card-text">
+                <label> {{user.user_state}} </label>
+              </div>
+              <div class="col-sm-12 card-text">
+                <label> {{user.user_country}} </label>
+              </div>
+              <div class="col-sm-12 card-text">
+                <label> {{user.user_zip}} </label>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-12 card-text">
-            <label> {{user.user_city}} </label>
-          </div>
-          <div class="col-sm-12 card-text">
-            <label> {{user.user_state}}  </label>
-          </div>
-          <div class="col-sm-12 card-text">
-            <label> {{user.user_country}} </label>
-          </div>
-          <div class="col-sm-12 card-text">
-            <label> {{user.user_zip}} </label>
-          </div>
-          </div>
-        </div>
         </div>
       </div>
       <div class="col-sm-6">
@@ -68,31 +68,56 @@
         <form fxLayout="column" [formGroup]="paymentForm" (ngSubmit)="onFormSubmit()">
           <mat-form-field>
             <input matInput placeholder="Enter 16 digit card number" formControlName="cardNumber" required>
-
           </mat-form-field>
+          <div class="validation-form" *ngIf="paymentForm.controls.cardNumber.invalid && paymentForm.controls.cardNumber.touched">
+            <span *ngIf="paymentForm.controls.cardNumber.errors.required">
+              CardNumber is required
+            </span>
+            <span *ngIf="paymentForm.controls.cardNumber.errors?.pattern">
+              CardNumber can ony contain 16 digit number
+            </span>
+          </div>
           <div class="row">
             <div class="col-lg-3">
               <mat-form-field>
-                <input matInput placeholder="expiry date" formControlName="expiryDate" required>
-
+                <input matInput type="date" placeholder="expiry date" formControlName="expiryDate" required>
               </mat-form-field>
+              <div class="validation-form" *ngIf="paymentForm.controls.expiryDate.invalid && paymentForm.controls.expiryDate.touched">
+                <span *ngIf="paymentForm.controls.expiryDate.errors.required">
+                  Expiry Date is required
+                </span>
+              </div>
             </div>
             <div class="col-lg-3" style="margin-left: 5%">
               <mat-form-field>
                 <input matInput placeholder="security number" formControlName="cvv" required>
-
               </mat-form-field>
+              <div class="validation-form" *ngIf="paymentForm.controls.cvv.invalid && paymentForm.controls.cvv.touched">
+                <span *ngIf="paymentForm.controls.cvv.errors.required">
+                  Security Number is required
+                </span>
+                <span *ngIf="paymentForm.controls.cvv.errors?.pattern">
+                  Security Number should be 3 digit number
+                </span>
+              </div>
             </div>
           </div>
           <mat-form-field>
             <input matInput placeholder="CardHolder Name" formControlName="name" required>
-
           </mat-form-field>
+          <div class="validation-form" *ngIf="paymentForm.controls.name.invalid && paymentForm.controls.name.touched">
+            <span *ngIf="paymentForm.controls.name.errors.required">
+              Name is required
+            </span>
+            <span *ngIf="paymentForm.controls.name.errors.pattern">
+              Name can ony contain Alphabets
+            </span>
+          </div>
           <div class="float-right">
-              <button type="submit" id="add" class="btn btn-primary float-right">Place Order</button>
-            </div>
+            <button type="submit" id="add" [disabled]="!paymentForm.valid" class="btn btn-primary float-right">Place Order</button>
+          </div>
         </form>
-        
+
       </div>
 
     </div>
