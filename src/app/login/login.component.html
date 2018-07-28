@@ -5,17 +5,17 @@
   </div>
   <!-- Default input email -->
   <div class="login">
-    <form (ngSubmit)="login()">
+    <form (ngSubmit)="login()" [formGroup]="loginForm" >
       <div class="form-group row" style="margin-top: 4%;margin-left: 15%;">
         <label class="col-1 col-form-label">Name</label>
-        <input class="form-control" type="text" maxlength="6" id="name" pattern="[^[A-Za-z]+$]{1,6}" title="Only letters allowed" required>
+        <input class="form-control" type="text" formControlName="useremail" maxlength="6" id="name" pattern="[^[A-Za-z]+$]{1,6}" title="Only letters allowed" required>
       </div>
 
       <br>
 
       <div class="form-group row" style="margin-top: 4%; margin-left: 15%;">
         <label class="col-1 col-form-label">Password</label>
-        <input class="form-control" type="text" maxlength="9" id="email" pattern="[^[A-Za-z0-9]+$]{1,9}" title="Only letters and numbers allowed" required>
+        <input class="form-control" type="text" formControlName="password" maxlength="9" id="email" pattern="[^[A-Za-z0-9]+$]{1,9}" title="Only letters and numbers allowed" required>
       </div>
       <br>
       <div class="text-center mt-4" style="margin-bottom: 5%;">

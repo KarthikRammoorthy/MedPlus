@@ -15,17 +15,9 @@ export class RestService {
   deletecartitemURL = environment.deletecartitemURL;
   loadUser = environment.loadUser;
   orderUpdate = environment.orderUpdate;
+  // loginUrl = environment.loginUrl;
 
   constructor(private  httpClient:  HttpClient) { }
-
-  createUser(user){
-
-    return  this.httpClient.post(`${this.InsertURL}`, user);
-  }
-
-  login(){
-    return this.httpClient.post(`${this.LoginUrl}`,"admin");
-  }
 
   buyProduct(obj) {
     const headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
@@ -48,4 +40,9 @@ export class RestService {
     const headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
     return this.httpClient.post(`${this.orderUpdate}`, obj, {headers: headers});
   }
+
+  // login(obj){
+    // const headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
+    // return this.httpClient.post(`${this.loginUrl}`, obj, {headers: headers});
+   // }
 }

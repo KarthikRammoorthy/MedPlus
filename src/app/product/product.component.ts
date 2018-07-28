@@ -25,15 +25,14 @@ export class ProductComponent implements OnInit {
     this.productId = event.target.id;
     console.log(event);
     console.log(this.productId);
-    
+
     const obj = {
       'productId': '12',
       'userId': '1'
     };
     console.log(obj);
-    
+
     this.restService.buyProduct(obj).subscribe((response) => {
-      alert(response);
     });
   }
 }
