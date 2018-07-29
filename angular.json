@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "MedPlus": {
+    "Web-assn3": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/MedPlus",
+            "outputPath": "dist/Web-assn3",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,12 +27,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "../MedPlus/node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.css"
             ],
-            "scripts": [ "../MedPlus/node_modules/jquery/dist/jquery.min.js",
-              "../MedPlus/node_modules/popper.js/dist/umd/popper.min.js",
-              "../MedPlus/node_modules/bootstrap/dist/js/bootstrap.min.js"]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -57,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "MedPlus:build"
+            "browserTarget": "Web-assn3:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "MedPlus:build:production"
+              "browserTarget": "Web-assn3:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "MedPlus:build"
+            "browserTarget": "Web-assn3:build"
           }
         },
         "test": {
@@ -102,7 +99,7 @@
         }
       }
     },
-    "MedPlus-e2e": {
+    "Web-assn3-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -110,11 +107,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "MedPlus:serve"
+            "devServerTarget": "Web-assn3:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "MedPlus:serve:production"
+              "devServerTarget": "Web-assn3:serve:production"
             }
           }
         },
@@ -130,5 +127,6 @@
       }
     }
   },
-  "defaultProject": "MedPlus"
+  "defaultProject": "Web-assn3"
 }
+

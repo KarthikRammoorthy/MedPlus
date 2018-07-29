@@ -1,25 +1,28 @@
-.main{
-  margin-left: 30%;
-  margin-top:10%;
-  margin-bottom:10%;
+.container{
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.2em;
+  margin: auto;
+  margin-top: 6em;
+  margin-bottom: 18em;
+}
+.container > *{
+  width:80%;
+}
+button{
+  margin-top: 4em;
+  background-color: turquoise;
+  margin-left: 3em;
 }
 
-
-.header{
-  border:solid #6799a3;
-  background: #6799a3;
-  color: white;
-  width: 60%;
-  padding: 1%;
+mat-card {
+  background-color: aliceblue;
 }
-.login{
-  border:solid #6799a3;
-  width: 60%;
+mat-form-field{
+  margin-top: 3em;
+  width: 70%;
+  margin-left: 3em;
 }
-.form-control{
-  width:50%;
-  margin-left:10%;
-}
-
 
 

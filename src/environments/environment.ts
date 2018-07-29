@@ -4,10 +4,9 @@
 
 export const environment = {
   production: false,
-  'InsertUrl': 'http://localhost:8080/MedPlus/user',
-  'LoginUrl': 'http://localhost:8080/MedPlus/login',
-  'buyProductURL': 'http://localhost:8080/MedPlus/buynow',
-  'loadCartURL': 'http://localhost:8080/MedPlus/checkout'
+  'getUserbyMailRLU': 'https://medplusapi.herokuapp.com/MedPlus/email/',
+  'postReviewbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/review',
+  'getProductbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/product/2/'
 };
 
 /*
@@ -17,6 +16,3 @@ export const environment = {
  * because it will have performance impact when throw error
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
-
-//"InsertUrl":'https://medplusapi.herokuapp.com/MedPlus/user'
-//test
