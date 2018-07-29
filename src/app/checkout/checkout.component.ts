@@ -18,7 +18,7 @@ export class CheckoutComponent implements OnInit {
 
   ngOnInit() {
     this.loadCart(1);
-    this.loadUserAddress(1);
+    //this.loadUserAddress(1);
     this.paymentForm = new FormGroup({
       cardNumber: new FormControl(),
         expiryDate: new FormControl(),
@@ -34,7 +34,7 @@ loadCart(id) {
   });
 }
 
-loadUserAddress(id) {
+/* loadUserAddress(id) {
   this.restService.loadUserDetails(id).subscribe((response) => {
     this.user = response;
   });
@@ -55,6 +55,6 @@ onFormSubmit() {
   this.restService.orderUpdateFunct(obj).subscribe((response) => {
     console.log(response);
   });
-}
+} */
 
 }
