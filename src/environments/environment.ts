@@ -6,10 +6,15 @@ export const environment = {
   production: false,
   'InsertUrl': 'https://medplusapi.herokuapp.com/MedPlus/user',
   'LoginUrl': 'http://localhost:8080/MedPlus/login',
-  'buyProductURL': 'http://localhost:8080/MedPlus/buynow',
-  'loadCartURL': 'http://localhost:8080/MedPlus/checkout',
   'searchProductURL': 'https://medplusapi.herokuapp.com/MedPlus/productsearch',
   'orderhistoryURL': 'https://medplusapi.herokuapp.com/MedPlus/orderhistory',
+  'buyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/buynow',
+  'loadCartURL': 'https://medplusapi.herokuapp.com/MedPlus/checkout',
+  'deletecartitemURL': 'https://medplusapi.herokuapp.com/MedPlus/deletecartitem',
+  'loadUser': 'https://medplusapi.herokuapp.com/MedPlus/user',
+  'orderUpdate': 'https://medplusapi.herokuapp.com/MedPlus/orderupdate',
+  "getProductUrl":'https://medplus-a3.herokuapp.com/MedPlus/product/',
+  "insertIntoCartURL": 'https://medplus-a3.herokuapp.com/MedPlus/cart'
 };
 
 /*
