@@ -25,7 +25,18 @@ import { HttpClientModule} from '@angular/common/http';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ProductModule } from './product/product.module';
 import { SearchresultComponent } from './searchresult/searchresult.component';
+import {FeedbackComponent} from './feedback/feedback.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+import { LocalStorageModule } from 'angular-2-local-storage';
+
+
+
+import { MatInputModule } from '@angular/material';
+import {MatChipsModule,} from '@angular/material/chips';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -44,9 +55,14 @@ import { SearchresultComponent } from './searchresult/searchresult.component';
     ProductComponent,
     AddToCartComponent,
     CheckoutComponent,
-    SearchresultComponent
+    SearchresultComponent,
+    FeedbackComponent
   ],
   imports: [
+    MatInputModule,
+    MatChipsModule,
+    MatExpansionModule,
+    MatSelectModule,
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
@@ -57,7 +73,9 @@ import { SearchresultComponent } from './searchresult/searchresult.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
-    ProductModule
+    ProductModule,
+    LocalStorageModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

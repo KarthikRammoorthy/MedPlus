@@ -14,7 +14,10 @@ export const environment = {
   'loadUser': 'https://medplusapi.herokuapp.com/MedPlus/user',
   'orderUpdate': 'https://medplusapi.herokuapp.com/MedPlus/orderupdate',
   "getProductUrl":'https://medplus-a3.herokuapp.com/MedPlus/product/',
-  "insertIntoCartURL": 'https://medplus-a3.herokuapp.com/MedPlus/cart'
+  "insertIntoCartURL": 'https://medplus-a3.herokuapp.com/MedPlus/cart',
+  'getUserbyMailURL': 'https://medplusapi.herokuapp.com/MedPlus/email/',
+  'postReviewbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/review',
+  'getProductbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/product/2/'
 };
 
 /*

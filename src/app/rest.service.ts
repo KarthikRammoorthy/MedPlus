@@ -19,6 +19,9 @@ export class RestService {
   orderUpdate = environment.orderUpdate;
   getProductUrl = environment.getProductUrl;
   insertIntoCartURL= environment.insertIntoCartURL;
+  getUserbyMailURL  =  environment.getUserbyMailURL;
+  postReviewbyProductURL = environment.postReviewbyProductURL;
+  getproductDetailsURL =  environment.getProductbyProductURL;
 
 
   constructor(private  httpClient:  HttpClient) { }
@@ -73,5 +76,13 @@ export class RestService {
     return  this.httpClient.get(`${this.getProductUrl}` + id);
   }
 
-  
+ getUserbyMail(user_Email) {
+   return  this.httpClient.get(`${this.getUserbyMailURL}/${user_Email}`);
+ }
+
+ postReviewbyProduct(feedback) {
+   return  this.httpClient.post(`${this.postReviewbyProductURL}`, feedback);
+ }
+
+
 }

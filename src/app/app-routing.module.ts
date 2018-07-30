@@ -11,6 +11,8 @@ import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {CheckoutComponent} from './checkout/checkout.component';
 import {SearchresultComponent} from './searchresult/searchresult.component';
+import {FeedbackComponent} from './feedback/feedback.component';
+
 
 
 const routes: Routes = [
@@ -22,7 +24,9 @@ const routes: Routes = [
   {path: 'cart', component: AddToCartComponent},
   {path: 'login', component: LoginComponent},
   {path: 'product/buy', component: CheckoutComponent},
-  {path: 'searchresult', component: SearchresultComponent}
+  {path: 'searchresult', component: SearchresultComponent},
+  {path: 'feedback', component: FeedbackComponent}
+
 ];
 
 @NgModule({
