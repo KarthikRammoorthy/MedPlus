@@ -12,7 +12,9 @@ export const environment = {
   'loadCartURL': 'https://medplusapi.herokuapp.com/MedPlus/checkout',
   'deletecartitemURL': 'https://medplusapi.herokuapp.com/MedPlus/deletecartitem',
   'loadUser': 'https://medplusapi.herokuapp.com/MedPlus/user',
-  'orderUpdate': 'https://medplusapi.herokuapp.com/MedPlus/orderupdate'
+  'orderUpdate': 'https://medplusapi.herokuapp.com/MedPlus/orderupdate',
+  "getProductUrl":'https://medplus-a3.herokuapp.com/MedPlus/product/',
+  "insertIntoCartURL": 'https://medplus-a3.herokuapp.com/MedPlus/cart'
 };
 
 /*
