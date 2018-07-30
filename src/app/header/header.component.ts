@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { DatasharingService } from '../datasharing.service';
 
 @Component({
   selector: 'app-header',
@@ -8,14 +9,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router) { }
-  searchterm: string = "";
+
+
+  constructor() {   }
 
   ngOnInit() {
-  }
-
-  doSearch() {
-    this.router.navigate(['searchresult', {searchterm: this.searchterm}]);
   }
 
 }

@@ -12,7 +12,8 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {CheckoutComponent} from './checkout/checkout.component';
 import {SearchresultComponent} from './searchresult/searchresult.component';
 import {FeedbackComponent} from './feedback/feedback.component';
-
+import {LogoutComponent} from './logout/logout.component';
+import {SearchbarComponent} from './searchbar/searchbar.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,10 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'product/buy', component: CheckoutComponent},
   {path: 'searchresult', component: SearchresultComponent},
-  {path: 'feedback', component: FeedbackComponent}
+  {path: 'feedback', component: FeedbackComponent},
+  {path: 'logout', component: LogoutComponent},
+  {path: 'searchbar', component: SearchbarComponent},
+
 
 ];
 

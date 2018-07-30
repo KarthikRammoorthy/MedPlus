@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 // import { LocalStorageService } from 'angular-2-local-storage';
 import { DatasharingService } from '../datasharing.service';
 import { RestService } from '../rest.service';
+import { LocalStorageService } from 'angular-2-local-storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   user: any;
 
   // tslint:disable-next-line:max-line-length
-  constructor(private fb: FormBuilder, private  restService:  RestService , private router: Router, private dataSharingService: DatasharingService) { }
+  constructor(private fb: FormBuilder, private  restService:  RestService , private router: Router, private dataSharingService: DatasharingService, private localStorageService: LocalStorageService) { }
 
   // tslint:disable-next-line:max-line-length
 
@@ -63,7 +64,9 @@ onClickLogin() {
     console.log(this.user.user_email);
     if ( verify === this.user.user_email && password === this.user.user_password) {
       this.dataSharingService.isUserLoggedIn.next(true);
-      alert('login successful');
+      this.localStorageService.set('user_object',this.user);
+      //this.localStorageService.set('key','user_logged_in');
+      //alert('login successful');
       // this.loggedIn.next(true);
       // console.log(this.localStorageService.get('key'));
       this.router.navigate(['/home'], { preserveQueryParams: true });

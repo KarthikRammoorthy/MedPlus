@@ -6,14 +6,14 @@
     position: absolute;
     background-position: center;
     background-size: cover;
-    /*background-image: url('../assets/images/HeaderImage.jpg');*/
+    background-image: url("/assets/images/HeaderImage.jpg");
     z-index: -1;
     opacity: 0.4;
     height:200px;
     object-fit: fill;
 }
 
-#header
+#header 
 {
     text-align: center;
     color: #003366;
@@ -23,47 +23,8 @@
 .container
 {
     padding: 0 1.2em;
-    text-align: center;
 }
 
 .container h1 {
     padding-top: 150px;
-
-}
-
-
-.navbar-expand-md{
-  width: 100%;
-  background-color: #6799a3;
-}
-.nav-item {
-  margin-left: 30%;
-  /* margin-top: 10%; */
-  width: 45%
-}
-
-.icon-bar {
-  width: 90px;
-  margin-left: 5%;
-  width: 20%;
-  /* Set a specific width */
-}
-
-.icon-bar a {
-  margin-left:20%;
-  transition: all 0.3s ease; /* Add transition for hover effects */
-  color: white; /* White text color */
-  font-size: 36px; /* Increased font-size */
-}
-
-.icon-bar a:hover {
-  background-color: rgb(159, 219, 48); /* Add a hover color */
-}
-
-
-
-.nav-item[_ngcontent-c1] {
-  margin-left: 0%;
-  width: 30%;
-
 }
