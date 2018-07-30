@@ -5,20 +5,31 @@ import { ProductComponent } from './product/product.component';
 import { LoginComponent } from './login/login.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { CommonModule } from '@angular/common';
+import { RegisterComponent } from './register/register.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import {CheckoutComponent} from './checkout/checkout.component';
+import {SearchresultComponent} from './searchresult/searchresult.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  {path: 'home', component: HomeComponent},
+  { path: 'home', component: HomeComponent, runGuardsAndResolvers: 'always' },
+  { path: 'register', component: RegisterComponent, runGuardsAndResolvers: 'always' },
+  { path: 'orderhistory', component: OrderHistoryComponent },
   {path: 'product', component: ProductComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'feedback', component: FeedbackComponent}];
+  {path: 'feedback', component: FeedbackComponent},
+  {path: 'product/buy', component: CheckoutComponent},
+  {path: 'searchresult', component: SearchresultComponent}
 
-// @NgModule({
+
+  // @NgModule({
 //   imports: [ RouterModule.forRoot(appRoutes) ],
 //   exports: [ RouterModule ]
 // })
-
+];
 
 @NgModule({
   imports: [

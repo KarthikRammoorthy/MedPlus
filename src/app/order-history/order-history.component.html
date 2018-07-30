@@ -1,19 +1,22 @@
 <div class="container" fxLayout ="column" fxLayoutGap = "5px">
-    <mat-card  *ngFor="let order of Orders">
+    <mat-card  *ngFor="let order of listOrderHistory">
         <mat-card-header>
-          <mat-card-title class="example-card"> {{order.name}}</mat-card-title>
-          <mat-card-subtitle>Order Number : {{order.ordernumber}}</mat-card-subtitle>
+          <mat-card-title> Product:  {{order.product_name}}</mat-card-title>
+          <mat-card-subtitle>Order Number : {{order.order_number}}</mat-card-subtitle>
         </mat-card-header>
        
         <mat-card-content fxLayout ="row" fxLayout.xs ="column" fxLayoutGap="5px">
-          <span fxFlex="33%" fxFlex.xs ="100%">
-          Order Date : {{order.orderdate}}
+          <span fxFlex="25%" fxFlex.xs ="100%">
+          Order Date : {{order.order_timestamp}}
           </span>
-          <span fxFlex="33%" fxFlex.xs ="100%"> 
-          Price: {{order.price}}
+          <span fxFlex="25%" fxFlex.xs ="100%"> 
+          Order Delivery Date: {{order.order_deliverydate}}
           </span>
-          <span fxFlex="33%" fxFlex.xs ="100%">
-            Quantity : {{order.quantity}}
+          <span fxFlex="25%" fxFlex.xs ="100%">
+            Quantity : {{order.order_quantity}}
+          </span>
+          <span fxFlex="25%" fxFlex.xs ="100%">
+            Price : $ {{order.order_price}}
           </span>
         </mat-card-content>
         <mat-card-actions fxLayout ="row" fxLayout.xs ="column" fxLayoutGap="5px">

@@ -1,3 +1,4 @@
+import { OrderHistoryComponent } from './order-history/order-history.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
@@ -22,13 +23,16 @@ import {MatSelectModule} from '@angular/material/select';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import { LocalStorageModule } from 'angular-2-local-storage';
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
-
-
+import { AddToCartComponent} from './add-to-cart/add-to-cart.component';
+import { HttpClientModule} from '@angular/common/http';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { ProductModule } from './product/product.module';
+import { SearchresultComponent } from './searchresult/searchresult.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -40,7 +44,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     HeaderComponent,
     FooterComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    AddToCartComponent,
+    CheckoutComponent,
+    SearchresultComponent,
+    RegisterComponent,
+    OrderHistoryComponent
   ],
   imports: [
     BrowserModule,

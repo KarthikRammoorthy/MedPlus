@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -8,16 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  current_loc;
-  city;
-
-  constructor() {
-   }
+  constructor(private router: Router) { }
+  // tslint:disable-next-line:no-inferrable-types
+  searchterm: string = '';
 
   ngOnInit() {
 
 
 
+  }
+
+  doSearch() {
+    this.router.navigate(['searchresult', {searchterm: this.searchterm}]);
   }
 
 }

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormGroupDirective, FormBuilder, FormControl, Validators ,FormsModule,NgForm, FormGroup } from '@angular/forms';
 import { RegistrationValidator } from '../register/register.validator';
 import { RestService } from '../rest.service';
+import { Router } from '@angular/router';
 
 
 
@@ -17,8 +18,8 @@ export class RegisterComponent implements OnInit {
 
 
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
-  //passwordPattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
-  passwordPattern = "^[a-zA-Z0-9?=.*?[#?!@$%^&*-]{8,}$$";
+  //passwordPattern = "^(?=.?[A-Z])(?=.?[a-z])(?=.?[0-9])(?=.?[#?!@$%^&*-]).{8,}$";
+  passwordPattern = "^[a-zA-Z0-9?=.?[#?!@$%^&-]{8,}$$";
   phonePattern = "^[0-9]{10}$";
   suitePattern = "^[0-9]{1,5}$";
   zipcodePattern = "[ABCEGHJKLMNPRSTVXY abceghjklmnprstvxy][0-9][ABCEGHJKLMNPRSTVWXYZ abceghjklmnprstvxy] ?[0-9][ABCEGHJKLMNPRSTVWXYZ abceghjklmnprstvxy][0-9]"
@@ -26,20 +27,20 @@ export class RegisterComponent implements OnInit {
   passwordGroup: FormGroup;
 
 
-  
 
 
 
 
-  
 
-  constructor(private formBuilder: FormBuilder, private restService: RestService) { }
+
+
+  constructor(private formBuilder: FormBuilder, private restService: RestService, private router: Router) { }
 
 
 
 
 ngOnInit() {
-    
+
   this.passwordGroup = this.formBuilder.group({
     password: ['', Validators.required],
     reenterpassword: ['', Validators.required]
@@ -49,7 +50,7 @@ ngOnInit() {
   this.registerForm = this.formBuilder.group({
     firstname : ['',Validators.required],
     lastname : ['',Validators.required],
-    emailid : ['',[Validators.required , Validators.pattern(this.emailPattern)]],  
+    emailid : ['',[Validators.required , Validators.pattern(this.emailPattern)]],
     phone : ['',[Validators.required , Validators.pattern(this.phonePattern)]],
     suite : ['',[Validators.required , Validators.pattern(this.suitePattern)]],
     street : ['',Validators.required],
@@ -58,7 +59,7 @@ ngOnInit() {
     country : ['',Validators.required],
     zip : ['',[Validators.required , Validators.pattern(this.zipcodePattern)]],
     passwordGroup: this.passwordGroup
-      
+
   });
 }
 
@@ -78,9 +79,9 @@ var user = {
 }
 this.restService.createUser(user).subscribe((response) => {
   console.log(response);
+  alert("Registration Successful");
+    this.router.navigate(['home']);
+
 });
 }
 }
-  
-
-  
