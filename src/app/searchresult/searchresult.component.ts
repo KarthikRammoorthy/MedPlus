@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { RestService } from '../rest.service';
+import { LocalStorageService } from 'angular-2-local-storage';
 
 @Component({
   selector: 'app-searchresult',
@@ -12,7 +13,7 @@ export class SearchresultComponent implements OnInit {
   private searchterm: string = "";
   listProducts: any;
 
-  constructor(private router: Router, private activatedroute: ActivatedRoute, private  restService:  RestService) { 
+  constructor(private router: Router, private activatedroute: ActivatedRoute, private  restService:  RestService, private localStorageService: LocalStorageService) { 
 
     this.activatedroute.params.subscribe(params =>{
       this.searchterm = params['searchterm'];
@@ -33,6 +34,10 @@ export class SearchresultComponent implements OnInit {
      
       this.router.navigate(['home']);
       alert("No Products found by this name/category.");
+      }
+      else {
+        this.localStorageService.set('product_object',this.listProducts);
+
       }
 
   });

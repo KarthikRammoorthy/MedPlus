@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   'InsertUrl': 'https://medplusapi.herokuapp.com/MedPlus/user',
-  'LoginUrl': 'http://localhost:8080/MedPlus/login',
+  'LoginUrl': 'https://medplusapi.herokuapp.com/MedPlus/login',
   'searchProductURL': 'https://medplusapi.herokuapp.com/MedPlus/productsearch',
   'orderhistoryURL': 'https://medplusapi.herokuapp.com/MedPlus/orderhistory',
   'buyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/buynow',

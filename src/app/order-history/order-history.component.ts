@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
+import { LocalStorageService } from 'angular-2-local-storage';
 
 @Component({
   selector: 'app-order-history',
@@ -8,11 +9,16 @@ import { RestService } from '../rest.service';
 })
 export class OrderHistoryComponent implements OnInit {
 
-  private userid:  String =  "1";
+
+  listUser: any;
+  private userid:  String = "";
   listOrderHistory: any;
+  
 
 
-  constructor(private  restService:  RestService) { 
+  constructor(private localStorageService: LocalStorageService, private  restService:  RestService) { 
+
+    this.GetUserDetails();
     this.displayOrderHistory();
   }
 
@@ -26,7 +32,15 @@ export class OrderHistoryComponent implements OnInit {
       this.listOrderHistory = response;
 
   });
-
 }
+
+  GetUserDetails()
+  {
+    this.listUser = this.localStorageService.get('user_object');
+    this.userid = this.listUser.user_id;
+
+  }
+
+
 
 }

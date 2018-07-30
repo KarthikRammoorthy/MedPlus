@@ -37,6 +37,8 @@ import { MatInputModule } from '@angular/material';
 import {MatChipsModule,} from '@angular/material/chips';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSelectModule} from '@angular/material/select';
+import { SearchbarComponent } from './searchbar/searchbar.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -56,7 +58,9 @@ import {MatSelectModule} from '@angular/material/select';
     AddToCartComponent,
     CheckoutComponent,
     SearchresultComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    SearchbarComponent,
+    LogoutComponent
   ],
   imports: [
     MatInputModule,
@@ -74,8 +78,11 @@ import {MatSelectModule} from '@angular/material/select';
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     ProductModule,
-    LocalStorageModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    LocalStorageModule.withConfig({
+      prefix: 'first-app',
+      storageType: 'localStorage'
+  }),
   ],
   providers: [],
   bootstrap: [AppComponent]
