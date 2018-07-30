@@ -47,7 +47,7 @@ get password() {
 
 onClickLogin() {
 
-  alert('please wait!!');
+  //alert('please wait!!');
   // tslint:disable-next-line:prefer-const
   // tslint:disable-next-line:no-var-keyword
   const verify = this.loginForm.get('email').value;

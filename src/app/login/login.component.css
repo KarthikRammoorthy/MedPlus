@@ -4,6 +4,12 @@
   margin-bottom:10%;
 }
 
+.container {
+  padding: 0 1.2em;
+  margin: auto;
+  margin-top: 2em;
+}
+
 
 .header{
   border:solid #6799a3;
