@@ -108,12 +108,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _add_to_cart_add_to_cart_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./add-to-cart/add-to-cart.component */ "./src/app/add-to-cart/add-to-cart.component.ts");
 /* harmony import */ var _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./checkout/checkout.component */ "./src/app/checkout/checkout.component.ts");
 /* harmony import */ var _searchresult_searchresult_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./searchresult/searchresult.component */ "./src/app/searchresult/searchresult.component.ts");
+/* harmony import */ var _feedback_feedback_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./feedback/feedback.component */ "./src/app/feedback/feedback.component.ts");
+/* harmony import */ var _logout_logout_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./logout/logout.component */ "./src/app/logout/logout.component.ts");
+/* harmony import */ var _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./searchbar/searchbar.component */ "./src/app/searchbar/searchbar.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -134,7 +140,10 @@ var routes = [
     { path: 'cart', component: _add_to_cart_add_to_cart_component__WEBPACK_IMPORTED_MODULE_8__["AddToCartComponent"] },
     { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"] },
     { path: 'product/buy', component: _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_9__["CheckoutComponent"] },
-    { path: 'searchresult', component: _searchresult_searchresult_component__WEBPACK_IMPORTED_MODULE_10__["SearchresultComponent"] }
+    { path: 'searchresult', component: _searchresult_searchresult_component__WEBPACK_IMPORTED_MODULE_10__["SearchresultComponent"] },
+    { path: 'feedback', component: _feedback_feedback_component__WEBPACK_IMPORTED_MODULE_11__["FeedbackComponent"] },
+    { path: 'logout', component: _logout_logout_component__WEBPACK_IMPORTED_MODULE_12__["LogoutComponent"] },
+    { path: 'searchbar', component: _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_13__["SearchbarComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -175,7 +184,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n\n<app-header></app-header>\n\n<router-outlet></router-outlet>\n<app-footer></app-footer>\n\n\n\n\n\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n\n<app-header></app-header>\n<app-searchbar></app-searchbar>\n\n<router-outlet></router-outlet>\n<app-footer></app-footer>\n\n\n\n\n\n"
 
 /***/ }),
 
@@ -251,12 +260,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./checkout/checkout.component */ "./src/app/checkout/checkout.component.ts");
 /* harmony import */ var _product_product_module__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./product/product.module */ "./src/app/product/product.module.ts");
 /* harmony import */ var _searchresult_searchresult_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./searchresult/searchresult.component */ "./src/app/searchresult/searchresult.component.ts");
+/* harmony import */ var _feedback_feedback_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./feedback/feedback.component */ "./src/app/feedback/feedback.component.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var angular_2_local_storage__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! angular-2-local-storage */ "./node_modules/angular-2-local-storage/dist/index.js");
+/* harmony import */ var angular_2_local_storage__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(angular_2_local_storage__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_material_chips__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/material/chips */ "./node_modules/@angular/material/esm5/chips.es5.js");
+/* harmony import */ var _angular_material_expansion__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/material/expansion */ "./node_modules/@angular/material/esm5/expansion.es5.js");
+/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/esm5/select.es5.js");
+/* harmony import */ var _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./searchbar/searchbar.component */ "./src/app/searchbar/searchbar.component.ts");
+/* harmony import */ var _logout_logout_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./logout/logout.component */ "./src/app/logout/logout.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
+
+
+
 
 
 
@@ -302,9 +330,16 @@ var AppModule = /** @class */ (function () {
                 _product_product_component__WEBPACK_IMPORTED_MODULE_18__["ProductComponent"],
                 _add_to_cart_add_to_cart_component__WEBPACK_IMPORTED_MODULE_19__["AddToCartComponent"],
                 _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_22__["CheckoutComponent"],
-                _searchresult_searchresult_component__WEBPACK_IMPORTED_MODULE_24__["SearchresultComponent"]
+                _searchresult_searchresult_component__WEBPACK_IMPORTED_MODULE_24__["SearchresultComponent"],
+                _feedback_feedback_component__WEBPACK_IMPORTED_MODULE_25__["FeedbackComponent"],
+                _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_32__["SearchbarComponent"],
+                _logout_logout_component__WEBPACK_IMPORTED_MODULE_33__["LogoutComponent"]
             ],
             imports: [
+                _angular_material__WEBPACK_IMPORTED_MODULE_28__["MatInputModule"],
+                _angular_material_chips__WEBPACK_IMPORTED_MODULE_29__["MatChipsModule"],
+                _angular_material_expansion__WEBPACK_IMPORTED_MODULE_30__["MatExpansionModule"],
+                _angular_material_select__WEBPACK_IMPORTED_MODULE_31__["MatSelectModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"],
                 _material_module__WEBPACK_IMPORTED_MODULE_2__["MaterialModule"],
@@ -315,7 +350,12 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_14__["ReactiveFormsModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__["BrowserAnimationsModule"],
                 angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_20__["MDBBootstrapModule"].forRoot(),
-                _product_product_module__WEBPACK_IMPORTED_MODULE_23__["ProductModule"]
+                _product_product_module__WEBPACK_IMPORTED_MODULE_23__["ProductModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_26__["NgbModule"].forRoot(),
+                angular_2_local_storage__WEBPACK_IMPORTED_MODULE_27__["LocalStorageModule"].withConfig({
+                    prefix: 'first-app',
+                    storageType: 'localStorage'
+                }),
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -409,7 +449,7 @@ module.exports = "body{\n    \n  font-family: 'Raleway', 'Arial';\n  color: #000
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n\n<head>\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  <title>Checkout</title>\n</head>\n\n<body>\n  <div class=\"table-responsive\">\n    <table class=\"table\" style=\"width: 90%; margin-left: 5%\">\n      <thead>\n        <tr>\n\n          <th style=\"width:20%\">Product</th>\n          <th> Details</th>\n          <th>Quantity</th>\n          <th>Price</th>\n          <th></th>\n\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let product of listProducts\">\n          <td>\n            <img src={{product.product.productImage}}>\n          </td>\n          <td>\n            <p style=\"font-size: 2vmax\">{{product.product.productName}}</p>\n          </td>\n          <td style=\"font-size: 2vmax\">{{product.product.productQuantity}}</td>\n          <td style=\"font-size: 2vmax\">$ {{product.product.productPrice}}</td>\n          <td>\n            <button class=\"btn btn-outline-danger\" (click)=\"delete($event)\" id=\"{{product.id}}\"> Delete </button>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n\n  <div class=\"information\" style=\"margin-left: 10%\">\n    <div class=\"row\">\n      <div class=\"col-sm-6\">\n        <h2>Address</h2>\n        <div class=\"card\" style=\"width: 40vw;\">\n        <div class=\"row\">\n            <div class=\"card-body\">\n          <div class=\"col-sm-12 card-text\">\n            <label> {{user.user_suite}} - {{user.user_street}} </label>\n          </div>\n          <div class=\"col-sm-12 card-text\">\n            <label> {{user.user_city}} </label>\n          </div>\n          <div class=\"col-sm-12 card-text\">\n            <label> {{user.user_state}}  </label>\n          </div>\n          <div class=\"col-sm-12 card-text\">\n            <label> {{user.user_country}} </label>\n          </div>\n          <div class=\"col-sm-12 card-text\">\n            <label> {{user.user_zip}} </label>\n          </div>\n          </div>\n        </div>\n        </div>\n      </div>\n      <div class=\"col-sm-6\">\n        <h2>Payment Information</h2>\n        <form fxLayout=\"column\" [formGroup]=\"paymentForm\" (ngSubmit)=\"onFormSubmit()\">\n          <mat-form-field>\n            <input matInput placeholder=\"Enter 16 digit card number\" formControlName=\"cardNumber\" required>\n\n          </mat-form-field>\n          <div class=\"row\">\n            <div class=\"col-lg-3\">\n              <mat-form-field>\n                <input matInput placeholder=\"expiry date\" formControlName=\"expiryDate\" required>\n\n              </mat-form-field>\n            </div>\n            <div class=\"col-lg-3\" style=\"margin-left: 5%\">\n              <mat-form-field>\n                <input matInput placeholder=\"security number\" formControlName=\"cvv\" required>\n\n              </mat-form-field>\n            </div>\n          </div>\n          <mat-form-field>\n            <input matInput placeholder=\"CardHolder Name\" formControlName=\"name\" required>\n\n          </mat-form-field>\n          <div class=\"float-right\">\n              <button type=\"submit\" id=\"add\" class=\"btn btn-primary float-right\">Place Order</button>\n            </div>\n        </form>\n        \n      </div>\n\n    </div>\n  </div>\n  <hr>\n  <br>\n  <br>\n\n\n\n</body>\n\n</html>\n"
+module.exports = "<html>\n\n<head>\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  <title>Checkout</title>\n</head>\n\n<body>\n  <div class=\"table-responsive\">\n    <table class=\"table\" style=\"width: 90%; margin-left: 5%\">\n      <thead>\n        <tr>\n\n          <th style=\"width:20%\">Product</th>\n          <th> Details</th>\n          <th>Quantity</th>\n          <th>Price</th>\n          <th></th>\n\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let product of listProducts\">\n          <td>\n            <img src={{product.product.productImage}}>\n          </td>\n          <td>\n            <p style=\"font-size: 2vmax\">{{product.product.product_name}}</p>\n          </td>\n          <td style=\"font-size: 2vmax\">{{product.product.product_quantity}}</td>\n          <td style=\"font-size: 2vmax\">$ {{product.product.product_price}}</td>\n          <td>\n            <button class=\"btn btn-outline-danger\" (click)=\"delete($event)\" id=\"{{product.id}}\"> Delete </button>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n\n  <div class=\"information\" style=\"margin-left: 10%\">\n    <div class=\"row\">\n      <div class=\"col-sm-6\">\n        <h2>Address</h2>\n        <div class=\"card\" style=\"width: 40vw;\">\n        <div class=\"row\">\n            <div class=\"card-body\">\n          <div class=\"col-sm-12 card-text\">\n            <label> {{user.user_suite}} - {{user.user_street}} </label>\n          </div>\n          <div class=\"col-sm-12 card-text\">\n            <label> {{user.user_city}} </label>\n          </div>\n          <div class=\"col-sm-12 card-text\">\n            <label> {{user.user_state}}  </label>\n          </div>\n          <div class=\"col-sm-12 card-text\">\n            <label> {{user.user_country}} </label>\n          </div>\n          <div class=\"col-sm-12 card-text\">\n            <label> {{user.user_zip}} </label>\n          </div>\n          </div>\n        </div>\n        </div>\n      </div>\n      <div class=\"col-sm-6\">\n        <h2>Payment Information</h2>\n        <form fxLayout=\"column\" [formGroup]=\"paymentForm\" (ngSubmit)=\"onFormSubmit()\">\n          <mat-form-field>\n            <input matInput placeholder=\"Enter 16 digit card number\" formControlName=\"cardNumber\" required>\n          </mat-form-field>\n          <div class=\"validation-form\" *ngIf=\"paymentForm.controls.cardNumber.invalid && paymentForm.controls.cardNumber.touched\">\n            <span *ngIf=\"paymentForm.controls.cardNumber.errors.required\">\n              CardNumber is required\n            </span>\n            <span *ngIf=\"paymentForm.controls.cardNumber.errors?.pattern\">\n              CardNumber can ony contain 16 digit number\n            </span>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-lg-3\">\n              <mat-form-field>\n                <input matInput type=\"date\" placeholder=\"expiry date\" formControlName=\"expiryDate\" required>\n              </mat-form-field>\n              <div class=\"validation-form\" *ngIf=\"paymentForm.controls.expiryDate.invalid && paymentForm.controls.expiryDate.touched\">\n                <span *ngIf=\"paymentForm.controls.expiryDate.errors.required\">\n                  Expiry Date is required\n                </span>\n              </div>\n            </div>\n            <div class=\"col-lg-3\" style=\"margin-left: 15%;margin-top:1%\">\n              <mat-form-field>\n                <input matInput placeholder=\"security number\" formControlName=\"cvv\" required>\n              </mat-form-field>\n              <div class=\"validation-form\" *ngIf=\"paymentForm.controls.cvv.invalid && paymentForm.controls.cvv.touched\">\n                <span *ngIf=\"paymentForm.controls.cvv.errors.required\">\n                  Security Number is required\n                </span>\n                <span *ngIf=\"paymentForm.controls.cvv.errors?.pattern\">\n                  Security Number should be 3 digit number\n                </span>\n              </div>\n            </div>\n          </div>\n          <mat-form-field>\n            <input matInput placeholder=\"CardHolder Name\" formControlName=\"name\" required>\n          </mat-form-field>\n          <div class=\"validation-form\" *ngIf=\"paymentForm.controls.name.invalid && paymentForm.controls.name.touched\">\n            <span *ngIf=\"paymentForm.controls.name.errors.required\">\n              Name is required\n            </span>\n            <span *ngIf=\"paymentForm.controls.name.errors.pattern\">\n              Name can ony contain Alphabets\n            </span>\n          </div>\n          <div class=\"float-right\">\n            <button type=\"submit\" id=\"add\" [disabled]=\"!paymentForm.valid\" class=\"btn btn-primary float-right\">Place Order</button>\n          </div>\n        </form>\n\n      </div>\n\n    </div>\n  </div>\n  <hr>\n  <br>\n  <br>\n\n\n\n</body>\n\n</html>\n"
 
 /***/ }),
 
@@ -444,20 +484,52 @@ var CheckoutComponent = /** @class */ (function () {
     }
     CheckoutComponent.prototype.ngOnInit = function () {
         this.loadCart(1);
-        //this.loadUserAddress(1);
+        this.loadUserAddress(1);
         this.paymentForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
-            cardNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](),
-            expiryDate: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](),
-            cvv: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](),
-            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](),
+            cardNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required,
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('^[0-9]{16}$')]),
+            expiryDate: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+            cvv: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required,
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('^[0-9]{3}$')]),
+            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required,
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('^[a-z A-Z]+$')]),
         });
     };
     CheckoutComponent.prototype.loadCart = function (id) {
         var _this = this;
         this.restService.loadCart(id).subscribe(function (response) {
             _this.listProducts = response;
-            console.log(_this.listProducts);
         });
+    };
+    CheckoutComponent.prototype.loadUserAddress = function (id) {
+        var _this = this;
+        this.restService.loadUserDetails(id).subscribe(function (response) {
+            _this.user = response;
+        });
+        this.loadCart(1);
+    };
+    CheckoutComponent.prototype.delete = function (event) {
+        var _this = this;
+        this.id = event.target.id;
+        this.restService.deleteItemFromCart(this.id).subscribe(function (response) {
+            _this.loadCart(1);
+        });
+    };
+    CheckoutComponent.prototype.onFormSubmit = function () {
+        var _this = this;
+        var obj = {
+            'listProducts': this.listProducts,
+            'userId': '1'
+        };
+        if (this.listProducts.length === 0) {
+            alert('No product present in Cart');
+        }
+        else {
+            this.restService.orderUpdateFunct(obj).subscribe(function (response) {
+                _this.loadCart(1);
+                alert('Order placed succesfully');
+            });
+        }
     };
     CheckoutComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -468,6 +540,155 @@ var CheckoutComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_rest_service__WEBPACK_IMPORTED_MODULE_1__["RestService"]])
     ], CheckoutComponent);
     return CheckoutComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/datasharing.service.ts":
+/*!****************************************!*\
+  !*** ./src/app/datasharing.service.ts ***!
+  \****************************************/
+/*! exports provided: DatasharingService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DatasharingService", function() { return DatasharingService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var DatasharingService = /** @class */ (function () {
+    function DatasharingService() {
+        this.isUserLoggedIn = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](false);
+    }
+    DatasharingService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], DatasharingService);
+    return DatasharingService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/feedback/feedback.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/feedback/feedback.component.css ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".container{\n  width: auto;\n  display: flex;\n  flex-direction: column;\n  padding: 0 1.2em;\n  margin: auto;\n  margin-top: 6em;\n  margin-bottom: 18em;\n}\n.container > *{\n  width:80%;\n}\nbutton{\n  margin-top: 4em;\n  background-color: turquoise;\n  margin-left: 3em;\n}\nmat-card {\n  background-color: aliceblue;\n}\nmat-form-field{\n  margin-top: 3em;\n  width: 70%;\n}\n\n\n"
+
+/***/ }),
+
+/***/ "./src/app/feedback/feedback.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/feedback/feedback.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  feedback works!\n</p>\n\n<div class=\"container\">\n  <mat-card>\n    <mat-card-title>\n      User Feedback\n    </mat-card-title>\n    <mat-card-content>\n\n          <form [formGroup]='feedbackForm' fxLayout =\"column\"  novalidate>\n\n            <mat-form-field>\n              <input matInput placeholder=\"Enter your comments\" formControlName=\"review\"   required>\n              <mat-error *ngIf=\"review.invalid\">\n                  Please enter the comments!\n                </mat-error>\n\n            </mat-form-field><br>\n            <p> User Rating : </p> <br>\n            <ngb-rating style=\"size: 10%;\" [(rate)]=\"currentRate\" formControlName=\"rating\"></ngb-rating>\n\n              <hr>\n              <pre style=\"size: 4em;\">Rating : <b>{{currentRate}}</b></pre>\n\n        </form>\n\n    </mat-card-content>\n    <mat-card-actions>\n      <button mat-button type=\"submit\" (click)=\"onClickSubmit()\">Submit Feedback</button>\n    </mat-card-actions>\n  </mat-card>\n\n\n  </div>\n"
+
+/***/ }),
+
+/***/ "./src/app/feedback/feedback.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/feedback/feedback.component.ts ***!
+  \************************************************/
+/*! exports provided: FeedbackComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeedbackComponent", function() { return FeedbackComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _rest_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../rest.service */ "./src/app/rest.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var FeedbackComponent = /** @class */ (function () {
+    function FeedbackComponent(fb, restService, router) {
+        this.fb = fb;
+        this.restService = restService;
+        this.router = router;
+        this.currentRate = 1;
+    }
+    FeedbackComponent.prototype.ngOnInit = function () {
+        this.feedbackForm = this.fb.group({
+            review: ['', [
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required
+                ]],
+            rating: ['', [
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required
+                ]]
+        });
+    };
+    Object.defineProperty(FeedbackComponent.prototype, "review", {
+        get: function () {
+            return this.feedbackForm.get('review');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(FeedbackComponent.prototype, "rating", {
+        get: function () {
+            return this.feedbackForm.get('rating');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    FeedbackComponent.prototype.onClickSubmit = function () {
+        // tslint:disable-next-line:prefer-const
+        var feedback = {
+            product_id: '1',
+            user_firstname: 'karthick',
+            review: this.feedbackForm.get('review').value,
+            rating: this.feedbackForm.get('rating').value
+        };
+        this.restService.postReviewbyProduct(feedback).subscribe(function (response) {
+            alert('User Feedback submitted successful');
+        });
+        this.router.navigate(['/product'], { preserveQueryParams: true });
+    };
+    FeedbackComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-feedback',
+            template: __webpack_require__(/*! ./feedback.component.html */ "./src/app/feedback/feedback.component.html"),
+            styles: [__webpack_require__(/*! ./feedback.component.css */ "./src/app/feedback/feedback.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _rest_service__WEBPACK_IMPORTED_MODULE_2__["RestService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+    ], FeedbackComponent);
+    return FeedbackComponent;
 }());
 
 
@@ -544,7 +765,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header_backgroundimage\n{\n\n    background-repeat: no-repeat;\n    width: 100%;\n    position: absolute;\n    background-position: center;\n    background-size: cover;\n    /*background-image: url('../assets/images/HeaderImage.jpg');*/\n    z-index: -1;\n    opacity: 0.4;\n    height:200px;\n    -o-object-fit: fill;\n       object-fit: fill;\n}\n\n#header\n{\n    text-align: center;\n    color: #003366;\n    margin-bottom: 10px;\n}\n\n.container\n{\n    padding: 0 1.2em;\n    text-align: center;\n}\n\n.container h1 {\n    padding-top: 150px;\n\n}\n\n.navbar-expand-md{\n  width: 100%;\n  background-color: #6799a3;\n}\n\n.nav-item {\n  margin-left: 30%;\n  /* margin-top: 10%; */\n  width: 45%\n}\n\n.icon-bar {\n  width: 90px;\n  margin-left: 5%;\n  width: 20%;\n  /* Set a specific width */\n}\n\n.icon-bar a {\n  margin-left:20%;\n  transition: all 0.3s ease; /* Add transition for hover effects */\n  color: white; /* White text color */\n  font-size: 36px; /* Increased font-size */\n}\n\n.icon-bar a:hover {\n  background-color: rgb(159, 219, 48); /* Add a hover color */\n}\n\n\n\n\n\n\n"
+module.exports = ".header_backgroundimage\n{\n\n    background-repeat: no-repeat;\n    width: 100%;\n    position: absolute;\n    background-position: center;\n    background-size: cover;\n    background-image: url(\"/assets/images/HeaderImage.jpg\");\n    z-index: -1;\n    opacity: 0.4;\n    height:200px;\n    -o-object-fit: fill;\n       object-fit: fill;\n}\n\n#header \n{\n    text-align: center;\n    color: #003366;\n    margin-bottom: 10px;\n}\n\n.container\n{\n    padding: 0 1.2em;\n}\n\n.container h1 {\n    padding-top: 150px;\n}"
 
 /***/ }),
 
@@ -555,7 +776,7 @@ module.exports = ".header_backgroundimage\n{\n\n    background-repeat: no-repeat
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <header id=\"header\">\n  <div class=\"header_backgroundimage\" [ngStyle]=\"{'background-image': 'url(assets/images/Carousel3.jpg)'}\"></div>\n  <div class=\"container\">\n  <h1> Med+</h1>\n  </div>\n  </header> -->\n\n\n\n  <nav class=\"navbar navbar-expand-md navbar-dark\" routerLinkActive=\"active\">\n    <!-- Brand -->\n    <a class=\"navbar-brand\" href=\"#\">Med +</a>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarResponsive\">\n      <form class=\"form-inline my-2 my-lg-0\" (ngSubmit) = \"doSearch()\" ngNativeValidate>\n        <input class=\"form-control mr-sm-2\" type=\"search\" [(ngModel)]= \"searchterm\" name =\"searchterm\"\n          placeholder=\"Search\"  aria-label=\"Search\">\n        <button class=\"btn btn-outline-dark my-2 my-sm-0\" type=\"submit\">Search</button>\n      </form>\n\n      <ul class=\"navbar-nav float-left\">\n        <li class=\"nav-item active\"><a class=\"nav-link\" href=\"#\">Home\n            <span class=\"sr-only\">(current)</span>\n        </a></li>\n        <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"register\">Register</a>\n        </li>\n        <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"orderhistory\">Order History</a>\n        </li>\n      </ul>\n    </div>\n  </nav>\n\n\n\n"
+module.exports = "<!-- <header id=\"header\">\n  <div class=\"header_backgroundimage\" [ngStyle]=\"{'background-image': 'url(assets/images/Carousel3.jpg)'}\"></div>\n  <div class=\"container\">\n  <h1> Med+</h1>\n  </div>\n  </header> -->\n\n\n\n<!--   <nav class=\"navbar navbar-expand-md navbar-dark\" routerLinkActive=\"active\">\n   \n    <a class=\"navbar-brand\" href=\"#\">Med +</a>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarResponsive\">\n      <form class=\"form-inline my-2 my-lg-0\" (ngSubmit) = \"doSearch()\" ngNativeValidate>\n        <input class=\"form-control mr-sm-2\" type=\"search\" [(ngModel)]= \"searchterm\" name =\"searchterm\"\n          placeholder=\"Search\"  aria-label=\"Search\">\n        <button class=\"btn btn-outline-dark my-2 my-sm-0\" type=\"submit\">Search</button>\n      </form>\n\n      <ul class=\"navbar-nav float-left\">\n        <li class=\"nav-item active\"><a class=\"nav-link\" href=\"#\">Home\n            <span class=\"sr-only\">(current)</span>\n        </a></li>\n        <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"login\">Login</a>\n        </li>\n        <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"register\">Register</a>\n        </li>\n        <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"orderhistory\">Order History</a>\n        </li>\n        <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"product\">Product</a>\n        </li>\n      </ul>\n    </div>\n  </nav> -->\n\n  <header id=\"header\">\n    <div class=\"header_backgroundimage\"></div>\n    <div class=\"container\">\n    <h1> MedPlus</h1>\n    </div>\n    </header>\n<!--     \n  <div class=\"container\">\n    <nav class=\"navigation\" fxLayout =\"row\" fxLayout.xs=\"column\" fxLayoutAlign=\"center center\" fxLayoutAlign.xs=\"center stretch\" fxLayoutGap.xs=\"5px\">\n        <a mat-stroked-button routerLink=\"/home\" fxFlex=\"10\">Home</a>\n        <a *ngIf=\"isUserLoggedIn\" mat-stroked-button routerLink=\"/orderhistory\" fxFlex=\"20\">Dashboard</a>\n        \n        <div fxFlex=\"40\" fxFlexOrder.xs =\"6\">\n        <form (ngSubmit) = \"doSearch()\" class=\"navigationsearch\" ngNativeValidate> \n            <input type=\"text\" [(ngModel)]= \"searchterm\" name =\"searchterm\" placeholder=\"Search Doctors..\" required>\n            <button type=\"submit\"> \n             <mat-icon>search</mat-icon>\n            </button>\n          </form>\n        </div>\n    \n        <a *ngIf=\"!isUserLoggedIn\" mat-stroked-button fxFlex=\"10\" routerLink=\"/register\">Register</a>\n        <a *ngIf=\"!isUserLoggedIn\" mat-stroked-button fxFlex=\"10\" routerLink=\"/login\">Login</a>\n        <a *ngIf=\"isUserLoggedIn\" mat-stroked-button fxFlex=\"10\" routerLink=\"/logout\">Logout</a>\n        \n    </nav>\n    </div> -->\n\n\n\n"
 
 /***/ }),
 
@@ -570,7 +791,6 @@ module.exports = "<!-- <header id=\"header\">\n  <div class=\"header_backgroundi
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function() { return HeaderComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -581,16 +801,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent(router) {
-        this.router = router;
-        this.searchterm = "";
+    function HeaderComponent() {
     }
     HeaderComponent.prototype.ngOnInit = function () {
-    };
-    HeaderComponent.prototype.doSearch = function () {
-        this.router.navigate(['searchresult', { searchterm: this.searchterm }]);
     };
     HeaderComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -598,7 +812,7 @@ var HeaderComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./header.component.html */ "./src/app/header/header.component.html"),
             styles: [__webpack_require__(/*! ./header.component.css */ "./src/app/header/header.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+        __metadata("design:paramtypes", [])
     ], HeaderComponent);
     return HeaderComponent;
 }());
@@ -740,7 +954,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".main{\n  margin-left: 30%;\n  margin-top:10%;\n  margin-bottom:10%;\n}\n\n\n.header{\n  border:solid #6799a3;\n  background: #6799a3;\n  color: white;\n  width: 60%;\n  padding: 1%;\n}\n\n\n.login{\n  border:solid #6799a3;\n  width: 60%;\n}\n\n\n.form-control{\n  width:50%;\n  margin-left:10%;\n}\n\n\n\n"
+module.exports = ".main{\n  margin-left: 30%;\n  margin-top:10%;\n  margin-bottom:10%;\n}\n\n.container {\n  padding: 0 1.2em;\n  margin: auto;\n  margin-top: 2em;\n}\n\n.header{\n  border:solid #6799a3;\n  background: #6799a3;\n  color: white;\n  width: 60%;\n  padding: 1%;\n}\n\n.login{\n  border:solid #6799a3;\n  width: 60%;\n}\n\n.form-control{\n  width:50%;\n  margin-left:10%;\n}\n\n\n\n"
 
 /***/ }),
 
@@ -751,7 +965,7 @@ module.exports = ".main{\n  margin-left: 30%;\n  margin-top:10%;\n  margin-botto
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Default form login -->\n<div class=\"main\">\n  <div class=\"header\">\n    <p class=\"h4 text-center mb-4\" style=\"margin-top: 2%;\">Login into your account</p>\n  </div>\n  <!-- Default input email -->\n  <div class=\"login\">\n    <form (ngSubmit)=\"login()\">\n      <div class=\"form-group row\" style=\"margin-top: 4%;margin-left: 15%;\">\n        <label class=\"col-1 col-form-label\">Name</label>\n        <input class=\"form-control\" type=\"text\" maxlength=\"6\" id=\"name\" pattern=\"[^[A-Za-z]+$]{1,6}\" title=\"Only letters allowed\" required>\n      </div>\n\n      <br>\n\n      <div class=\"form-group row\" style=\"margin-top: 4%; margin-left: 15%;\">\n        <label class=\"col-1 col-form-label\">Password</label>\n        <input class=\"form-control\" type=\"text\" maxlength=\"9\" id=\"email\" pattern=\"[^[A-Za-z0-9]+$]{1,9}\" title=\"Only letters and numbers allowed\" required>\n      </div>\n      <br>\n      <div class=\"text-center mt-4\" style=\"margin-bottom: 5%;\">\n        <button class=\"btn btn-success\" type=\"submit\">Login</button>\n      </div>\n    </form>\n  </div>\n  <!-- Default form login -->\n</div>\n"
+module.exports = "<!-- Default form login -->\n\n  <!-- Default form login -->\n<!-- </div> -->\n\n<div class=\"container\">\n  <mat-card>\n    <mat-card-title fxLayoutAlign=\"center\">\n      Sign up\n    </mat-card-title>\n    <mat-card-content>\n    \n      <form [formGroup]=\"loginForm\" fxLayout =\"column\" (ngSubmit)=\"onClickLogin()\" novalidate>\n        <mat-form-field>\n          <input matInput name=\"email\" formControlName=\"email\" placeholder=\"email\" minlength=\"1\" required>\n          <mat-error *ngIf=\"email.invalid\">\n            Please enter the email\n          </mat-error>\n        </mat-form-field>\n        <br>\n        <mat-form-field>\n          <input matInput type=\"password\" placeholder=\"Password\" name=\"password\" formControlName=\"password\" required>\n          <mat-error *ngIf=\"password.invalid\">\n            Please enter the password\n          </mat-error>\n        </mat-form-field>\n        <br>\n\n        <button mat-button fxLayoutAlign=\"center\" type=\"submit\" >LOGIN</button>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n\n"
 
 /***/ }),
 
@@ -766,7 +980,12 @@ module.exports = "<!-- Default form login -->\n<div class=\"main\">\n  <div clas
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _rest_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../rest.service */ "./src/app/rest.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _datasharing_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../datasharing.service */ "./src/app/datasharing.service.ts");
+/* harmony import */ var _rest_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../rest.service */ "./src/app/rest.service.ts");
+/* harmony import */ var angular_2_local_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angular-2-local-storage */ "./node_modules/angular-2-local-storage/dist/index.js");
+/* harmony import */ var angular_2_local_storage__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(angular_2_local_storage__WEBPACK_IMPORTED_MODULE_5__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -778,16 +997,78 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
+// import { LocalStorageService } from 'angular-2-local-storage';
+
+
+
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(restService) {
+    // tslint:disable-next-line:max-line-length
+    function LoginComponent(fb, restService, router, dataSharingService, localStorageService) {
+        this.fb = fb;
         this.restService = restService;
+        this.router = router;
+        this.dataSharingService = dataSharingService;
+        this.localStorageService = localStorageService;
     }
+    // tslint:disable-next-line:max-line-length
     LoginComponent.prototype.ngOnInit = function () {
-    };
-    LoginComponent.prototype.login = function () {
-        this.restService.login().subscribe(function (response) {
-            console.log(response);
+        this.loginForm = this.fb.group({
+            email: ['', [
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required
+                ]],
+            password: ['', [
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required
+                ]]
         });
+    };
+    Object.defineProperty(LoginComponent.prototype, "email", {
+        get: function () {
+            return this.loginForm.get('email');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(LoginComponent.prototype, "password", {
+        get: function () {
+            return this.loginForm.get('password');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /*get isLoggedIn() {
+      return this.loggedIn.asObservable(); // {2}
+    }*/
+    LoginComponent.prototype.onClickLogin = function () {
+        var _this = this;
+        //alert('please wait!!');
+        // tslint:disable-next-line:prefer-const
+        // tslint:disable-next-line:no-var-keyword
+        var verify = this.loginForm.get('email').value;
+        var mail = this.loginForm.get('email').value + '/';
+        var password = this.loginForm.get('password').value;
+        // tslint:disable-next-line:quotemark
+        if (mail !== '' && password !== '') {
+            this.restService.getUserbyMail(mail).subscribe(function (response) {
+                console.log(response);
+                _this.user = response;
+                console.log(_this.user.user_password);
+                console.log(_this.user.user_email);
+                if (verify === _this.user.user_email && password === _this.user.user_password) {
+                    _this.dataSharingService.isUserLoggedIn.next(true);
+                    _this.localStorageService.set('user_object', _this.user);
+                    //this.localStorageService.set('key','user_logged_in');
+                    //alert('login successful');
+                    // this.loggedIn.next(true);
+                    // console.log(this.localStorageService.get('key'));
+                    _this.router.navigate(['/home'], { preserveQueryParams: true });
+                }
+                else {
+                    alert('Invalid Credentials...Please try again');
+                    _this.loginForm.reset();
+                }
+            });
+        }
     };
     LoginComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -795,9 +1076,88 @@ var LoginComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./login.component.html */ "./src/app/login/login.component.html"),
             styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/login/login.component.css")]
         }),
-        __metadata("design:paramtypes", [_rest_service__WEBPACK_IMPORTED_MODULE_1__["RestService"]])
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _rest_service__WEBPACK_IMPORTED_MODULE_4__["RestService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _datasharing_service__WEBPACK_IMPORTED_MODULE_3__["DatasharingService"], angular_2_local_storage__WEBPACK_IMPORTED_MODULE_5__["LocalStorageService"]])
     ], LoginComponent);
     return LoginComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/logout/logout.component.css":
+/*!*********************************************!*\
+  !*** ./src/app/logout/logout.component.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/logout/logout.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/logout/logout.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/logout/logout.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/logout/logout.component.ts ***!
+  \********************************************/
+/*! exports provided: LogoutComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LogoutComponent", function() { return LogoutComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var angular_2_local_storage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angular-2-local-storage */ "./node_modules/angular-2-local-storage/dist/index.js");
+/* harmony import */ var angular_2_local_storage__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(angular_2_local_storage__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _datasharing_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../datasharing.service */ "./src/app/datasharing.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var LogoutComponent = /** @class */ (function () {
+    function LogoutComponent(localStorageService, router, dataSharingService) {
+        var _this = this;
+        this.localStorageService = localStorageService;
+        this.router = router;
+        this.dataSharingService = dataSharingService;
+        this.localStorageService.clearAll();
+        this.dataSharingService.isUserLoggedIn.next(false);
+        this.router.navigateByUrl("/searchbar", { skipLocationChange: false }).then(function () {
+            return _this.router.navigate(['home']);
+        });
+    }
+    LogoutComponent.prototype.ngOnInit = function () {
+    };
+    LogoutComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-logout',
+            template: __webpack_require__(/*! ./logout.component.html */ "./src/app/logout/logout.component.html"),
+            styles: [__webpack_require__(/*! ./logout.component.css */ "./src/app/logout/logout.component.css")]
+        }),
+        __metadata("design:paramtypes", [angular_2_local_storage__WEBPACK_IMPORTED_MODULE_1__["LocalStorageService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _datasharing_service__WEBPACK_IMPORTED_MODULE_3__["DatasharingService"]])
+    ], LogoutComponent);
+    return LogoutComponent;
 }());
 
 
@@ -951,6 +1311,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrderHistoryComponent", function() { return OrderHistoryComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _rest_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../rest.service */ "./src/app/rest.service.ts");
+/* harmony import */ var angular_2_local_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angular-2-local-storage */ "./node_modules/angular-2-local-storage/dist/index.js");
+/* harmony import */ var angular_2_local_storage__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(angular_2_local_storage__WEBPACK_IMPORTED_MODULE_2__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -962,10 +1324,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var OrderHistoryComponent = /** @class */ (function () {
-    function OrderHistoryComponent(restService) {
+    function OrderHistoryComponent(localStorageService, restService) {
+        this.localStorageService = localStorageService;
         this.restService = restService;
-        this.userid = "1";
+        this.userid = "";
+        this.GetUserDetails();
         this.displayOrderHistory();
     }
     OrderHistoryComponent.prototype.ngOnInit = function () {
@@ -976,13 +1341,17 @@ var OrderHistoryComponent = /** @class */ (function () {
             _this.listOrderHistory = response;
         });
     };
+    OrderHistoryComponent.prototype.GetUserDetails = function () {
+        this.listUser = this.localStorageService.get('user_object');
+        this.userid = this.listUser.user_id;
+    };
     OrderHistoryComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-order-history',
             template: __webpack_require__(/*! ./order-history.component.html */ "./src/app/order-history/order-history.component.html"),
             styles: [__webpack_require__(/*! ./order-history.component.css */ "./src/app/order-history/order-history.component.css")]
         }),
-        __metadata("design:paramtypes", [_rest_service__WEBPACK_IMPORTED_MODULE_1__["RestService"]])
+        __metadata("design:paramtypes", [angular_2_local_storage__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], _rest_service__WEBPACK_IMPORTED_MODULE_1__["RestService"]])
     ], OrderHistoryComponent);
     return OrderHistoryComponent;
 }());
@@ -1009,7 +1378,7 @@ module.exports = ".prodcut-heading{\n  font-size: 3vw\n}\n\n.product-desc{\n  fo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-lg-4 col-4 col-sm-4 col-md-4 center-block\">\n      <img src=\"assets/images/Ibuprofen.png\">\n    </div>\n    <div class=\"col-lg-6 col-6 col-sm-6 col-md-6\">\n      <h1 class=\"prodcut-heading\">Ibuprofen</h1>\n      <h2 class=\"product-price\">50$</h2><br>\n      <p class=\"product-desc\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n        ever since the 1500s.</p>\n      <div><span class=\"fa fa-star checked\"></span>\n        <span class=\"fa fa-star checked\"></span>\n        <span class=\"fa fa-star checked\"></span>\n        <span class=\"fa fa-star\"></span>\n        <span class=\"fa fa-star\"></span></div>\n      <br>\n      <button mat-button type=\"button\" id=\"12\" routerLink=\"buy\" (click)=\"buy($event)\" class=\"btn btn-success\">Buy Now</button>&nbsp;&nbsp;\n      <button mat-button type=\"button\" id=\"add\" class=\"btn btn-primary\">Add to Cart</button>\n\n    </div>\n  </div>\n</div>\n<div class=\"reviews\">\n  <h1 class=\"review-heading\">Reviews</h1>\n  <hr class=\"hr-css\">\n  <h3 class=\"reviewer\">A. Joe</h3>\n  <div><span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star\"></span>\n    <span class=\"fa fa-star\"></span></div>\n  <p class=\"review-desc\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n    ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n    ever since the 1500s</p><br><br>\n  <h3 class=\"reviewer\">B. Bill</h3>\n  <div><span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star\"></span></div>\n  <p class=\"review-desc\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n    ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n    ever since the 1500s</p>\n</div>\n\n"
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-lg-4 col-4 col-sm-4 col-md-4 center-block\">\n      <br><br>\n      <img src=\"{{ product.productImage }}\">\n    </div>\n    <div class=\"col-lg-6 col-6 col-sm-6 col-md-6\">\n      <h1 class=\"prodcut-heading\">{{ product.productName }}</h1>\n      <h2 class=\"product-price\">${{ product.productPrice }}</h2><br>\n      <p class=\"product-desc\">{{ product.productInfo }}</p>\n       <br><br>\n      <button mat-button type=\"button\" id=\"12\" routerLink=\"buy\" (click)=\"buy($event)\" class=\"btn btn-success\">Buy Now</button>&nbsp;&nbsp;\n      <a routerLink=\"cart\"> <button mat-button type=\"button\" id=\"12\" (click)=\"insertIntoCart()\" class=\"btn btn-primary\">Add to Cart</button></a>\n      <button type=\"button\" class=\"btn btn-primary\" style=\"color: white;\" routerLink=\"/feedback\" >Feedback</button>\n\n    </div>\n  </div>\n</div>\n<div class=\"reviews\">\n  <h1 class=\"review-heading\">Reviews</h1>\n  <hr class=\"hr-css\">\n  <h3 class=\"reviewer\">A. Joe</h3>\n  <div><span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star\"></span>\n    <span class=\"fa fa-star\"></span></div>\n  <p class=\"review-desc\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n    ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n    ever since the 1500s</p><br><br>\n  <h3 class=\"reviewer\">B. Bill</h3>\n  <div><span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star checked\"></span>\n    <span class=\"fa fa-star\"></span></div>\n  <p class=\"review-desc\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n    ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text\n    ever since the 1500s</p>\n</div>\n\n"
 
 /***/ }),
 
@@ -1045,6 +1414,27 @@ var ProductComponent = /** @class */ (function () {
         // this.productId = this.route.snapshot.params.param1;
     }
     ProductComponent.prototype.ngOnInit = function () {
+        this.Product(12);
+        this.userId = "2";
+        this.productId = "12";
+        this.quantity = "2";
+    };
+    ProductComponent.prototype.Product = function (id) {
+        var _this = this;
+        this.restService.getProduct(id).subscribe(function (response) {
+            _this.product = response;
+            console.log(_this.product);
+        });
+    };
+    ProductComponent.prototype.insertIntoCart = function () {
+        var ob = {
+            'user_id': this.userId,
+            'product_id': this.productId,
+            'quantity': this.quantity
+        };
+        this.restService.insertCart(ob).subscribe(function (response) {
+            console.log(response);
+        });
     };
     ProductComponent.prototype.buy = function (event) {
         this.productId = event.target.id;
@@ -1296,16 +1686,30 @@ var RestService = /** @class */ (function () {
         this.httpClient = httpClient;
         this.InsertURL = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].InsertUrl;
         this.LoginUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].LoginUrl;
-        this.buyProductURL = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].buyProductURL;
-        this.loadCartURL = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].loadCartURL;
         this.searchProductURL = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].searchProductURL;
         this.orderhistoryURL = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].orderhistoryURL;
+        this.buyProductURL = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].buyProductURL;
+        this.loadCartURL = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].loadCartURL;
+        this.deletecartitemURL = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].deletecartitemURL;
+        this.loadUser = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].loadUser;
+        this.orderUpdate = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].orderUpdate;
+        this.getProductUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].getProductUrl;
+        this.insertIntoCartURL = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].insertIntoCartURL;
+        this.getUserbyMailURL = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].getUserbyMailURL;
+        this.postReviewbyProductURL = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].postReviewbyProductURL;
+        this.getproductDetailsURL = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].getProductbyProductURL;
     }
     RestService.prototype.createUser = function (user) {
         return this.httpClient.post("" + this.InsertURL, user);
     };
     RestService.prototype.login = function () {
         return this.httpClient.post("" + this.LoginUrl, "admin");
+    };
+    RestService.prototype.getProductByName = function (searchterm) {
+        return this.httpClient.get(this.searchProductURL + "/" + searchterm);
+    };
+    RestService.prototype.getOrderHistory = function (id) {
+        return this.httpClient.get(this.orderhistoryURL + "/" + id);
     };
     RestService.prototype.buyProduct = function (obj) {
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/json; charset=utf-8' });
@@ -1314,11 +1718,29 @@ var RestService = /** @class */ (function () {
     RestService.prototype.loadCart = function (id) {
         return this.httpClient.get("" + this.loadCartURL + '/' + id);
     };
-    RestService.prototype.getProductByName = function (searchterm) {
-        return this.httpClient.get(this.searchProductURL + "/" + searchterm);
+    RestService.prototype.deleteItemFromCart = function (id) {
+        return this.httpClient.delete("" + this.deletecartitemURL + '/' + id);
     };
-    RestService.prototype.getOrderHistory = function (id) {
-        return this.httpClient.get(this.orderhistoryURL + "/" + id);
+    RestService.prototype.loadUserDetails = function (id) {
+        return this.httpClient.get("" + this.loadUser + '/' + id);
+    };
+    RestService.prototype.orderUpdateFunct = function (obj) {
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/json; charset=utf-8' });
+        return this.httpClient.post("" + this.orderUpdate, obj, { headers: headers });
+    };
+    RestService.prototype.insertCart = function (ob) {
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'Content-Type': 'application/json; charset=utf-8' });
+        return this.httpClient.post("" + this.insertIntoCartURL, ob, { headers: headers });
+    };
+    RestService.prototype.getProduct = function (id) {
+        console.log("" + this.getProductUrl + id);
+        return this.httpClient.get("" + this.getProductUrl + id);
+    };
+    RestService.prototype.getUserbyMail = function (user_Email) {
+        return this.httpClient.get(this.getUserbyMailURL + "/" + user_Email);
+    };
+    RestService.prototype.postReviewbyProduct = function (feedback) {
+        return this.httpClient.post("" + this.postReviewbyProductURL, feedback);
     };
     RestService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -1396,6 +1818,87 @@ var SearchComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/searchbar/searchbar.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/searchbar/searchbar.component.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".navigation a\n{\n\n    margin: 0 1em;\n    align-content: center;\n}\n\n.navigationsearch {\n    display: -ms-grid;\n    display: grid;\n    -ms-grid-columns:3fr 1fr;\n        grid-template-columns:3fr 1fr;\n    margin: 0 1em;\n    align-content: center;\n\n}\n\n.container {\n    padding: 0 1.2em;\n    margin: auto;\n    margin-top: 1em;\n    margin-bottom: 1em;\n  }\n"
+
+/***/ }),
+
+/***/ "./src/app/searchbar/searchbar.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/searchbar/searchbar.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <nav class=\"navigation\" fxLayout =\"row\" fxLayout.xs=\"column\" fxLayoutAlign=\"center center\" fxLayoutAlign.xs=\"center stretch\" fxLayoutGap.xs=\"5px\">\n      <a mat-stroked-button routerLink=\"/home\" fxFlex=\"10\">Home</a>\n      <a *ngIf=\"isUserLoggedIn\" mat-stroked-button routerLink=\"/orderhistory\" fxFlex=\"20\">Dashboard</a>\n      \n      <div fxFlex=\"50\" fxFlexOrder.xs =\"6\">\n      <form (ngSubmit) = \"doSearch()\" class=\"navigationsearch\" ngNativeValidate> \n          <input type=\"text\" [(ngModel)]= \"searchterm\" name =\"searchterm\" placeholder=\"Search Products..\" required>\n          <button type=\"submit\"> \n           <mat-icon>search</mat-icon>\n          </button>\n        </form>\n      </div>\n  \n      <a *ngIf=\"!isUserLoggedIn\" mat-stroked-button fxFlex=\"10\" routerLink=\"/register\">Register</a>\n      <a *ngIf=\"!isUserLoggedIn\" mat-stroked-button fxFlex=\"10\" routerLink=\"/login\">Login</a>\n      <a *ngIf=\"isUserLoggedIn\" mat-stroked-button fxFlex=\"10\" routerLink=\"/logout\">Logout</a>\n      \n  </nav>\n  </div>\n"
+
+/***/ }),
+
+/***/ "./src/app/searchbar/searchbar.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/searchbar/searchbar.component.ts ***!
+  \**************************************************/
+/*! exports provided: SearchbarComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchbarComponent", function() { return SearchbarComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _datasharing_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../datasharing.service */ "./src/app/datasharing.service.ts");
+/* harmony import */ var angular_2_local_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! angular-2-local-storage */ "./node_modules/angular-2-local-storage/dist/index.js");
+/* harmony import */ var angular_2_local_storage__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(angular_2_local_storage__WEBPACK_IMPORTED_MODULE_3__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var SearchbarComponent = /** @class */ (function () {
+    function SearchbarComponent(router, dataSharingService, localStorageService) {
+        var _this = this;
+        this.router = router;
+        this.dataSharingService = dataSharingService;
+        this.localStorageService = localStorageService;
+        this.searchterm = "";
+        this.dataSharingService.isUserLoggedIn.subscribe(function (value) {
+            _this.isUserLoggedIn = value;
+        });
+    }
+    SearchbarComponent.prototype.ngOnInit = function () {
+    };
+    SearchbarComponent.prototype.doSearch = function () {
+        this.router.navigate(['searchresult', { searchterm: this.searchterm }]);
+    };
+    SearchbarComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-searchbar',
+            template: __webpack_require__(/*! ./searchbar.component.html */ "./src/app/searchbar/searchbar.component.html"),
+            styles: [__webpack_require__(/*! ./searchbar.component.css */ "./src/app/searchbar/searchbar.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _datasharing_service__WEBPACK_IMPORTED_MODULE_2__["DatasharingService"], angular_2_local_storage__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"]])
+    ], SearchbarComponent);
+    return SearchbarComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/searchresult/searchresult.component.css":
 /*!*********************************************************!*\
   !*** ./src/app/searchresult/searchresult.component.css ***!
@@ -1431,6 +1934,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _rest_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../rest.service */ "./src/app/rest.service.ts");
+/* harmony import */ var angular_2_local_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! angular-2-local-storage */ "./node_modules/angular-2-local-storage/dist/index.js");
+/* harmony import */ var angular_2_local_storage__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(angular_2_local_storage__WEBPACK_IMPORTED_MODULE_3__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1443,12 +1948,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var SearchresultComponent = /** @class */ (function () {
-    function SearchresultComponent(router, activatedroute, restService) {
+    function SearchresultComponent(router, activatedroute, restService, localStorageService) {
         var _this = this;
         this.router = router;
         this.activatedroute = activatedroute;
         this.restService = restService;
+        this.localStorageService = localStorageService;
         this.searchterm = "";
         this.activatedroute.params.subscribe(function (params) {
             _this.searchterm = params['searchterm'];
@@ -1465,6 +1972,9 @@ var SearchresultComponent = /** @class */ (function () {
                 _this.router.navigate(['home']);
                 alert("No Products found by this name/category.");
             }
+            else {
+                _this.localStorageService.set('product_object', _this.listProducts);
+            }
         });
     };
     SearchresultComponent = __decorate([
@@ -1473,7 +1983,7 @@ var SearchresultComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./searchresult.component.html */ "./src/app/searchresult/searchresult.component.html"),
             styles: [__webpack_require__(/*! ./searchresult.component.css */ "./src/app/searchresult/searchresult.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _rest_service__WEBPACK_IMPORTED_MODULE_2__["RestService"]])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _rest_service__WEBPACK_IMPORTED_MODULE_2__["RestService"], angular_2_local_storage__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"]])
     ], SearchresultComponent);
     return SearchresultComponent;
 }());
@@ -1498,11 +2008,19 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false,
     'InsertUrl': 'https://medplusapi.herokuapp.com/MedPlus/user',
-    'LoginUrl': 'http://localhost:8080/MedPlus/login',
-    'buyProductURL': 'http://localhost:8080/MedPlus/buynow',
-    'loadCartURL': 'http://localhost:8080/MedPlus/checkout',
+    'LoginUrl': 'https://medplusapi.herokuapp.com/MedPlus/login',
     'searchProductURL': 'https://medplusapi.herokuapp.com/MedPlus/productsearch',
     'orderhistoryURL': 'https://medplusapi.herokuapp.com/MedPlus/orderhistory',
+    'buyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/buynow',
+    'loadCartURL': 'https://medplusapi.herokuapp.com/MedPlus/checkout',
+    'deletecartitemURL': 'https://medplusapi.herokuapp.com/MedPlus/deletecartitem',
+    'loadUser': 'https://medplusapi.herokuapp.com/MedPlus/user',
+    'orderUpdate': 'https://medplusapi.herokuapp.com/MedPlus/orderupdate',
+    "getProductUrl": 'https://medplus-a3.herokuapp.com/MedPlus/product/',
+    "insertIntoCartURL": 'https://medplus-a3.herokuapp.com/MedPlus/cart',
+    'getUserbyMailURL': 'https://medplusapi.herokuapp.com/MedPlus/email/',
+    'postReviewbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/review',
+    'getProductbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/product/2/'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
