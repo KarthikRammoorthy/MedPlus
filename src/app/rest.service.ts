@@ -17,6 +17,9 @@ export class RestService {
   deletecartitemURL = environment.deletecartitemURL;
   loadUser = environment.loadUser;
   orderUpdate = environment.orderUpdate;
+  getProductUrl = environment.getProductUrl;
+  insertIntoCartURL= environment.insertIntoCartURL;
+
 
   constructor(private  httpClient:  HttpClient) { }
 
@@ -59,5 +62,16 @@ export class RestService {
     const headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
     return this.httpClient.post(`${this.orderUpdate}`, obj, {headers: headers});
   }
+
+  insertCart(ob){
+    const headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
+    return this.httpClient.post(`${this.insertIntoCartURL}`, ob, {headers: headers});
+  }
+
+  getProduct(id){
+    console.log(`${this.getProductUrl}` + id);
+    return  this.httpClient.get(`${this.getProductUrl}` + id);
+  }
+
   
 }

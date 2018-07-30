@@ -12,6 +12,10 @@ import { RestService } from '../rest.service';
 export class ProductComponent implements OnInit {
 
   productId: String;
+  id: String;
+  userId: String;
+  quantity: String;
+  product : any;
 
 
   constructor(private route: ActivatedRoute, private restService: RestService) {
@@ -19,7 +23,32 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.Product(12);
+    this.userId = "2";
+    this.productId = "12";
+    this.quantity = "2"
+
   }
+
+  Product(id){
+    this.restService.getProduct(id).subscribe((response) => {
+      this.product = response;
+      console.log(this.product);
+    });
+  }
+
+  
+insertIntoCart(){
+  const ob = {
+    'user_id':this.userId,
+    'product_id':this.productId,
+    'quantity':this.quantity
+  }
+   this.restService.insertCart(ob).subscribe((response) =>{
+     console.log(response)
+   });
+ }
+ 
 
   buy(event) {
     this.productId = event.target.id;
