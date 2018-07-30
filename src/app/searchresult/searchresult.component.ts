@@ -35,12 +35,16 @@ export class SearchresultComponent implements OnInit {
       this.router.navigate(['home']);
       alert("No Products found by this name/category.");
       }
-      else {
-        this.localStorageService.set('product_object',this.listProducts);
-
-      }
 
   });
 
+}
+
+NavigateProductInfo(product: any){
+
+ 
+    this.localStorageService.set('product_object',product);
+    this.router.navigate(['feedback']);
+ 
 }
 }
