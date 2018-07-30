@@ -10,11 +10,13 @@ export class RestService {
 
   InsertURL = environment.InsertUrl;
   LoginUrl = environment.LoginUrl;
-  buyProductURL = environment.buyProductURL;
-  loadCartURL = environment.loadCartURL;
   searchProductURL = environment.searchProductURL;
   orderhistoryURL = environment.orderhistoryURL;
-  
+  buyProductURL = environment.buyProductURL;
+  loadCartURL = environment.loadCartURL;
+  deletecartitemURL = environment.deletecartitemURL;
+  loadUser = environment.loadUser;
+  orderUpdate = environment.orderUpdate;
 
   constructor(private  httpClient:  HttpClient) { }
 
@@ -27,6 +29,15 @@ export class RestService {
     return this.httpClient.post(`${this.LoginUrl}`,"admin");
   }
 
+  getProductByName(searchterm){
+
+    return this.httpClient.get(`${this.searchProductURL}/${searchterm}`);
+  }
+
+  getOrderHistory(id){
+    return this.httpClient.get(`${this.orderhistoryURL}/${id}`);
+  }
+
   buyProduct(obj) {
     const headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
     return this.httpClient.post(`${this.buyProductURL}`, obj, {headers: headers});
@@ -36,14 +47,17 @@ export class RestService {
     return  this.httpClient.get(`${this.loadCartURL}` + '/' + id);
   }
 
-  getProductByName(searchterm){
-
-    return this.httpClient.get(`${this.searchProductURL}/${searchterm}`);
-  
+  deleteItemFromCart(id) {
+    return this.httpClient.delete(`${this.deletecartitemURL}` + '/' + id);
   }
 
-  getOrderHistory(id){
-    return this.httpClient.get(`${this.orderhistoryURL}/${id}`);
+  loadUserDetails(id) {
+    return this.httpClient.get(`${this.loadUser}` + '/' + id);
+  }
+
+  orderUpdateFunct(obj){
+    const headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
+    return this.httpClient.post(`${this.orderUpdate}`, obj, {headers: headers});
   }
   
 }
