@@ -48,4 +48,12 @@ export class SearchresultComponent implements OnInit {
   });
 
 }
+
+NavigateProductInfo(product: any){
+
+ 
+    this.localStorageService.set('product_object',product);
+    this.router.navigate(['feedback']);
+ 
+}
 }
