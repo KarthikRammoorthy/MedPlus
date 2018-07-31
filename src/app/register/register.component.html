@@ -26,7 +26,7 @@
               
             <div [formGroup]='passwordGroup' fxLayout ="column">
             <mat-form-field>
-                <input matInput placeholder="Enter your password" formControlName="password"  required> 
+                <input type="password" matInput placeholder="Enter your password" formControlName="password"  required> 
                 <mat-hint>Password must contain a minimum of 8 letters</mat-hint> 
             </mat-form-field>
             <p class="bg-danger" *ngIf="passwordGroup.controls.password.errors?.required && passwordGroup.controls.password.touched">Please enter password</p>
@@ -34,7 +34,7 @@
 
             <br/>
             <mat-form-field>
-                <input matInput placeholder="Reenter password" formControlName="reenterpassword"  required>   
+                <input type="password" matInput placeholder="Reenter password" formControlName="reenterpassword"  required>   
             </mat-form-field>
             <p class="bg-danger" *ngIf="passwordGroup.errors?.doesNotMatchPassword && passwordGroup.controls.reenterpassword.touched">Password does not match</p>
         </div>
