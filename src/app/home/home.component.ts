@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
+import { LocalStorageService } from 'angular-2-local-storage';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,19 +12,34 @@ import { RestService } from '../rest.service';
 export class HomeComponent implements OnInit {
 
   category: String;
-  homeProducts : any;
+  eyeProducts : any;
   productCategory : String;
+  earProducts: any;
 
-  constructor(private restService: RestService) { }
+  constructor(private router: Router, private restService: RestService, private localStorageService: LocalStorageService) { }
 
   ngOnInit() {
-    this.Product('eye');
+    this.ProductEye('eye');
+    this.ProductCold('cold');
   }
 
-  Product(category){
+  ProductEye(category) {
     this.restService.getProductByCategory(category).subscribe((response) =>{
-      this.homeProducts = response;
-      console.log(this.homeProducts);
+      this.eyeProducts = response;
+      console.log(this.eyeProducts);
     });
   }
+
+  ProductCold(category) {
+    this.restService.getProductByCategory(category).subscribe((response) =>{
+      this.earProducts = response;
+      console.log(this.earProducts);
+    });
+  }
+
+  NavigateProductInfo(product: any) {
+    this.localStorageService.set('product_object', product);
+    this.router.navigate(['/product'], {queryParams: {}});
+ 
+}
 }
