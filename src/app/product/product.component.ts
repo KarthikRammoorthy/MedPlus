@@ -43,7 +43,7 @@ export class ProductComponent implements OnInit {
 
 
 insertIntoCart() {
-  // this.productId = event.target.id;
+  this.productId = event.target.id;
 
   const obj = {
     'productId': this.productId,
