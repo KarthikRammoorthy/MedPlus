@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.ProductEye('eye');
-    this.ProductCold('cold');
+    this.ProductCold('ear');
   }
 
   ProductEye(category) {

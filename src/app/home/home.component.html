@@ -49,11 +49,11 @@
   
     <div class="infoDiv">
         <div class="tabDiv">
-            <p style="font-weight: bold; text-align: center; padding-bottom: 80%; width: 100%"> Eye Drops</p>
+            <p style="font-weight: bold; text-align: center; padding-bottom: 80%; width: 100%"> Ear Drops</p>
             <p style="font-weight: bold; margin-left: 48%"> Price</p>
         </div>
-        <div class="tabDiv" *ngFor="let product of homeProducts">
-              <img src={{product.product_url}} class="img" alt="?">
+        <div class="tabDiv" *ngFor="let product of earProducts">
+              <img src={{product.product_url}} class="img" alt="?" (click) = "NavigateProductInfo(product)">
               <p>{{ product.product_name }}</p>  
               <p>$ {{ product.product_price }}</p>
     </div>
