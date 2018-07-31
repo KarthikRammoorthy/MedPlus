@@ -56,7 +56,7 @@ delete(event) {
 onFormSubmit() {
   const obj = {
     'listProducts': this.listProducts,
-    'userId': this.id;
+    'userId': this.id
   };
   this.paymentForm.reset();
   if (this.listProducts.length === 0) {

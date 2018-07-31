@@ -24,25 +24,23 @@ export class SearchresultComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  productinfo(){
+  NavigateProductInfo(product: any) {
+    this.localStorageService.set('product_object', product);
     this.router.navigate(['/product'], {queryParams: {}});
-    // this.router.navigateByUrl(url);
-  }
+ 
+}
 
   displaySearchResult(searchterm: string) {
     this.restService.getProductByName(searchterm).subscribe((response:Response) => {
 
       this.listProducts = response;
       if(!this.listProducts[0]) {
-    
-     
       this.router.navigate(['home']);
       alert("No Products found by this name/category.");
       }
       else {
        
-        this.localStorageService.set('product_object',this.listProducts);
+        this.localStorageService.set('product_object', this.listProducts);
       }
 
   });

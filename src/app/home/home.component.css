@@ -55,7 +55,7 @@
 
 /***************************************************/
 .tabDiv {
-  max-width: 30%;
+  max-width: 20%;
   padding: 0 4px;
   display: inline-block;
   margin-left: 6%;
@@ -64,9 +64,9 @@
   border-radius: 8%;
   cursor: pointer;
 }
-
 .tabDiv p{
   margin-top: 8%;
+  margin-left: 27%;
 }
 .infoDiv{
   margin: 3%;
@@ -76,10 +76,7 @@
   margin-left: 20%;
 }
 
-img{
-    width: 50%;
-    height: 50%;
-}
+
 
 /*************************************************************/
 
