@@ -23,85 +23,71 @@
 <!-- </div> -->
 
 <div class = "prodCarousel" >
-  <!--Carousel Wrapper-->
-  <mdb-carousel [isControls]="true"  [animation]="'slide'">
-      <!--First slide-->
-      <mdb-slide>
-          <img class="d-block w-100" src="assets/images/home/final1.png" alt="First slide">
-
-      </mdb-slide>
-      <!--/First slide-->
-      <!--Second slide-->
-      <mdb-slide>
-          <img class="d-block w-100 h-30" src="assets/images/home/final2.jpg" alt="Second slide">
-
-      </mdb-slide>
-      <!--/Second slide-->
-      <!--Third slide-->
-      <mdb-slide>
-          <img class="d-block w-100 h-30" src="assets/images/home/final3.jpg" alt="Third slide">
-
-      </mdb-slide>
-      <!--/Third slide-->
-  </mdb-carousel>
-  <!--/.Carousel Wrapper-->
-  </div>
-
-  <div class="infoDiv">
-      <div class="tabDiv">
-          <p style="size: 5%; font-weight: bold; text-align: center; padding-bottom: 60%; "> Sore Throat</p>
-          <p style="size: 5%; font-weight: bold; "> Price</p>
-
-      </div>
-      <div class="tabDiv">
-        <img src="assets/images/home/tab4.jpg" class="img" alt="?" >
-          <p>$46.99</p>
-      </div>
-      <div class="tabDiv">
-          <img src="assets/images/home/tab1.jpg" class="img" alt="?">
-          <p>$46.99</p>
-      </div>
-      <div class="tabDiv">
-          <img src="assets/images/home/tab2.jpg" class="img" alt="?">
-          <p>$46.99</p>
-      </div>
-
-      <div class="tabDiv">
-
-          <img src="assets/images/home/tab3.jpg" class="img" alt="?">
-          <p>$46.99</p>
-
-      </div>
-  </div>
-
-  <div class="infoDiv">
-      <div class="tabDiv">
-          <p style="size: 5%; font-weight: bold; text-align: center; padding-bottom: 80%; "> Eye Drops</p>
-          <p style="size: 5%; font-weight: bold; "> Price</p>
-      </div>
-      <div class="tabDiv">
-          <img src="assets/images/home/eyeDrops1.png" class="img" alt="?" >
-          <p class = "eyeDrops">$46.99</p>
-
-      </div>
-      <div class="tabDiv">
-          <img src="assets/images/home/eyeDrops2.jpg" class="img" alt="?">
-          <p class = "eyeDrops">$46.99</p>
-
-      </div>
-      <div class="tabDiv">
-          <img src="assets/images/home/eyeDrops3.jpg" class="img" alt="?">
-          <p class = "eyeDrops">$46.99</p>
-
-      </div>
-      <div class="tabDiv">
-          <img src="assets/images/home/eyeDrops4.jpg" class="img" alt="?" onclick="">
-          <p class = "eyeDrops">$46.99</p>
-      </div>
-  </div>
-  <div>
-  </div>
-
-
-
-
+    <!--Carousel Wrapper-->
+    <mdb-carousel [isControls]="true"  [animation]="'slide'">
+        <!--First slide-->
+        <mdb-slide>
+            <img class="d-block w-100" src="assets/images/home/final1.png" alt="First slide">
+  
+        </mdb-slide>
+        <!--/First slide-->
+        <!--Second slide-->
+        <mdb-slide>
+            <img class="d-block w-100 h-30" src="assets/images/home/final2.jpg" alt="Second slide">
+  
+        </mdb-slide>
+        <!--/Second slide-->
+        <!--Third slide-->
+        <mdb-slide>
+            <img class="d-block w-100 h-30" src="assets/images/home/final3.jpg" alt="Third slide">
+  
+        </mdb-slide>
+        <!--/Third slide-->
+    </mdb-carousel>
+    <!--/.Carousel Wrapper-->
+    </div>
+  
+    <div class="infoDiv">
+        <div class="tabDiv">
+            <p style="size: 5%; font-weight: bold; text-align: center; padding-bottom: 60%; ">EyeDrops</p>
+  
+        </div>
+        <div class="tabDiv" *ngFor="let product of homeProducts">
+              <img src={{product.productImage}} class="img" alt="?" >
+              <p>{{ product.product_name }}</p>  
+              <p>$ {{ product.product_price }}</p>
+            </div>
+    </div>
+  
+    <div class="infoDiv">
+        <div class="tabDiv">
+            <p style="size: 5%; font-weight: bold; text-align: center; padding-bottom: 80%; "> Eye Drops</p>
+            <p style="size: 5%; font-weight: bold; "> Price</p>
+        </div>
+        <div class="tabDiv">
+            <img src="assets/images/home/eyeDrops1.png" class="img" alt="?" >
+            <p class = "eyeDrops">$46.99</p>
+  
+        </div>
+        <div class="tabDiv">
+            <img src="assets/images/home/eyeDrops2.jpg" class="img" alt="?">
+            <p class = "eyeDrops">$46.99</p>
+  
+        </div>
+        <div class="tabDiv">
+            <img src="assets/images/home/eyeDrops3.jpg" class="img" alt="?">
+            <p class = "eyeDrops">$46.99</p>
+  
+        </div>
+        <div class="tabDiv">
+            <img src="assets/images/home/eyeDrops4.jpg" class="img" alt="?" onclick="">
+            <p class = "eyeDrops">$46.99</p>
+        </div>
+    </div>
+    <div>
+    </div>
+  
+  
+  
+  
+  

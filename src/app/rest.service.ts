@@ -22,6 +22,7 @@ export class RestService {
   getUserbyMailURL  =  environment.getUserbyMailURL;
   postReviewbyProductURL = environment.postReviewbyProductURL;
   getproductDetailsURL =  environment.getProductbyProductURL;
+  getProductCategoryUrl = environment.getProductCategoryURL;
 
 
   constructor(private  httpClient:  HttpClient) { }
@@ -84,5 +85,9 @@ export class RestService {
    return  this.httpClient.post(`${this.postReviewbyProductURL}`, feedback);
  }
 
+ getProductByCategory(category){
+  console.log(`${this.getProductCategoryUrl}` + category);
+  return  this.httpClient.get(`${this.getProductCategoryUrl}` + category);
+}
 
 }
