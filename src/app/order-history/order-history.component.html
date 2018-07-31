@@ -19,35 +19,14 @@
             Price : $ {{order.order_price}}
           </span>
         </mat-card-content>
-        <mat-card-actions fxLayout ="row" fxLayout.xs ="column" fxLayoutGap="5px">
-            <span fxFlex="25%" fxFlex.xs ="100%">
-          <button mat-stroked-button> Feedback
-          <mat-icon>
-              feedback           
-          </mat-icon>  
-          </button>
-          </span>
-          <span fxFlex="25%" fxFlex.xs ="100%">
-              <button mat-stroked-button> Product Info
-              <mat-icon>
-                  info             
-              </mat-icon>  
-              </button>
-              </span>
-              <span fxFlex="25%" fxFlex.xs ="100%">
-                  <button mat-stroked-button> Add To Cart
-                  <mat-icon>
-                      add_shopping_cart             
-                  </mat-icon>  
-                  </button>
-                  </span>
-                  <span fxFlex="25%" fxFlex.xs ="100%">
-                      <button mat-stroked-button> Delete
+        <mat-card-actions fxLayout ="column" fxLayoutAlign="center">
+           
+                      <button mat-stroked-button (click)="DeleteOrderHistory(order)"> Delete
                       <mat-icon>
                           delete             
                       </mat-icon>  
                       </button>
-                      </span>
+                      
 
         </mat-card-actions>
       </mat-card>

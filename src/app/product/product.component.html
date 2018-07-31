@@ -2,18 +2,20 @@
   <div class="row">
     <div class="col-lg-4 col-4 col-sm-4 col-md-4 center-block">
       <br><br>
-      <img src="{{ product.product_url }}">
+      <img src="{{ productInfo.product_url }}">
     </div>
     <div class="col-lg-6 col-6 col-sm-6 col-md-6">
-      <h1 class="prodcut-heading">{{ product.product_name }}</h1>
-      <h2 class="product-price">${{ product.product_price }}</h2><br>
-      <p class="product-desc">{{ product.product_information }}</p>
+      <h1 class="prodcut-heading">{{ productInfo.product_name }}</h1>
+      <h2 class="product-price">${{ productInfo.product_price }}</h2><br>
+      <p class="product-desc"><b> Description </b></p>
+      <p class="product-desc">{{ productInfo.product_information }}</p>
        <br><br>
-      <button mat-button type="button" id="12" routerLink="buy" (click)="buy($event)" class="btn btn-success">Buy Now</button>&nbsp;&nbsp;
-      <a routerLink="cart"> <button mat-button type="button" id="12" (click)="insertIntoCart()" class="btn btn-primary">Add to Cart</button></a>
+      <button mat-button type="button"  (click)="buy($event)" class="btn btn-success" style="margin-bottom: 1%">Buy Now</button>&nbsp;&nbsp;
+      <a> <button mat-button type="button"  (click)="insertIntoCart()" class="btn btn-primary" style="margin-bottom: 1%">Add to Cart</button></a> &nbsp;&nbsp;
+      <button mat-button type="button" (click)="NavigateToFeedback()" class="btn btn-warning" >Feedback</button>
+
       <br>
       <br>
-      <button type="button" class="btn btn-primary" style="color: white;" routerLink="/feedback" >Feedback</button>
 
     </div>
   </div>

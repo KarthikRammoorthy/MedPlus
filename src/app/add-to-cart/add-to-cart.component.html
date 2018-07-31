@@ -63,7 +63,7 @@ img{
         <tbody>
           <tr *ngFor="let product of listProducts">
             <td>
-              <img src={{product.product.productImage}}>
+              <img src={{product.product.product_url}}>
             </td>
             <td>
               <p style="font-size: 2vmax">{{product.product.product_name}}</p>
@@ -78,8 +78,8 @@ img{
       </table>
     </div>
 
-        <button type="button" id="add" class="btn btn-primary" style="margin: 1%" >Continue Shopping</button>
-              <button type="button" id="add" class="btn btn-primary float-right" style="margin: 1%">Checkout</button>
+        <button type="button" id="add" class="btn btn-primary" style="margin: 1%" (click)="navigateToHome()" >Continue Shopping</button>
+              <button type="button" class="btn btn-primary float-right" style="margin: 1%" (click)="navigateToCheckout()">Checkout</button>
 
 
 

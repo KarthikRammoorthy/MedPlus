@@ -28,7 +28,7 @@ export class FeedbackComponent implements OnInit {
         this.router.navigate(['/login'], { preserveQueryParams: true });
 
       }
-      this.product = this.localStorageService.get('product_object')[0];
+      this.product = this.localStorageService.get('product_object');
 
 
 
@@ -60,8 +60,6 @@ onClickSubmit() {
       };
       console.log(feedback);
     this.restService.postReviewbyProduct(feedback).subscribe((response: Response) => {
-
-          alert('User Feedback submitted successful');
 });
 
     this.router.navigate(['/dummy2'], { preserveQueryParams: true });

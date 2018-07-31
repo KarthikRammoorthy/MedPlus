@@ -41,6 +41,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { LogoutComponent } from './logout/logout.component';
 import { Dummy2Component } from './dummy2/dummy2.component';
+import { DummyComponent } from './dummy/dummy.component';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import { Dummy2Component } from './dummy2/dummy2.component';
     FeedbackComponent,
     SearchbarComponent,
     LogoutComponent,
-    Dummy2Component
+    Dummy2Component,
+    DummyComponent,
   ],
   imports: [
     MatInputModule,

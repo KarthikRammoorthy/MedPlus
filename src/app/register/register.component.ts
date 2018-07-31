@@ -77,12 +77,18 @@ var user = {
   user_country: this.registerForm.get('country').value,
   user_zip: this.registerForm.get('zip').value
 }
+if(confirm("Please exercise care while using this application. Confirm to Continue")) {
 this.restService.createUser(user).subscribe((response) => {
   console.log(response);
+  
   alert("Registration Successful");
-    this.router.navigate(['home']);
+    this.router.navigate(['login']);
   
 });
+}
+else {
+  this.router.navigate(['home']);
+}
 }
 }
 

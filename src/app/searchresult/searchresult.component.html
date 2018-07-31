@@ -16,29 +16,27 @@
       </mat-card-content>
       <mat-card-actions fxLayout ="row" fxLayout.xs ="column" fxLayoutGap="5px">
           <span fxFlex="33%" fxFlex.xs ="100%">
-        <button mat-stroked-button> Feedback
+        <button mat-stroked-button > Feedback
         <mat-icon>
             feedback
         </mat-icon>
         </button>
         </span>
         <span fxFlex="33%" fxFlex.xs ="100%">
-            <button mat-stroked-button> Add to Cart
+
+          <button mat-stroked-button (click)="NavigateProductInfo(product)" class="btn btn-info"> Product Info
+          <mat-icon>
+              info
+          </mat-icon>
+      </button>
+      </span>
+        <span fxFlex="33%" fxFlex.xs ="100%">
+            <button mat-stroked-button class="btn btn-success"> Add to Cart
             <mat-icon>
               add_shopping_cart
             </mat-icon>
             </button>
             </span>
-
-            <span fxFlex="33%" fxFlex.xs ="100%">
-
-              <button mat-stroked-button (click)="productinfo()"> Product Info
-              <mat-icon>
-                  info
-              </mat-icon>
-              </button>
-              </span>
-
       </mat-card-actions>
     </mat-card>
 
