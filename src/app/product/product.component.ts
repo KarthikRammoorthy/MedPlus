@@ -18,17 +18,20 @@ export class ProductComponent implements OnInit {
   quantity: String;
   product: any;
   user: any;
+  reviewList:any;
 
 
-  constructor(private router: Router, private route: ActivatedRoute, private restService: RestService; private localStorageService: LocalStorageService) {
+  constructor(private router: Router, private route: ActivatedRoute, private restService: RestService, private localStorageService: LocalStorageService) {
     // this.productId = this.route.snapshot.params.param1;
+    this.product = this.localStorageService.get('product_object')[0];
+    this.displayReview();
   }
 
   ngOnInit() {
     //this.Product(12);
-    this.user = this.localStorageService.get('user_object');
-    this.id = this.user.user_id;
-    this.product = this.localStorageService.get('product_object')[0];
+    // this.id = this.user.user_id;
+
+
   }
 
   // Product(id){
@@ -38,33 +41,41 @@ export class ProductComponent implements OnInit {
     // });
   // }
 
-  
+
 insertIntoCart() {
-  this.productId = event.target.id;
-  
+  // this.productId = event.target.id;
+
   const obj = {
     'productId': this.productId,
     'userId': this.id
   };
   console.log(obj);
-  
+
   this.restService.buyProduct(obj).subscribe((response) => {
     this.router.navigate(['/cart'], {queryParams: {}});
   });
  }
- 
+
 
   buy(event) {
     this.productId = event.target.id;
-    
+
     const obj = {
       'productId': this.productId,
       'userId': this.id
     };
     console.log(obj);
-    
+
     this.restService.buyProduct(obj).subscribe((response) => {
       this.router.navigate(['/buy'], {queryParams: {}});
     });
   }
+
+  displayReview() {
+    this.restService.getReviewByProduct(this.product.product_id).subscribe((response:Response) => {
+      this.reviewList = response;
+      console.log(response);
+
+  });
+}
 }

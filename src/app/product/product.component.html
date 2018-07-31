@@ -18,7 +18,7 @@
     </div>
   </div>
 </div>
-<div class="reviews">
+<!-- <div class="reviews">
   <h1 class="review-heading">Reviews</h1>
   <hr class="hr-css">
   <h3 class="reviewer">A. Joe</h3>
@@ -39,5 +39,28 @@
   <p class="review-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
     ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
     ever since the 1500s</p>
-</div>
+</div> -->
+
+<div class="container" fxLayout ="column" fxLayoutGap = "5px">
+
+      <h1 class="prodcut-heading">User Feedback</h1>
+
+
+  <mat-card  *ngFor="let review of reviewList">
+
+
+      <mat-card-content fxLayout ="row" fxLayout.xs ="column" fxLayoutGap="5px">
+          <span fxFlex="25%" fxFlex.xs ="100%">
+              Name:  {{review.user_firstname}}
+              </span>
+        <span fxFlex="25%" fxFlex.xs ="100%">
+        Review : {{review.product_id}}
+        </span><br>
+        <span fxFlex="25%" fxFlex.xs ="100%">
+          Rating : {{review.rating}}/10
+        </span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
 

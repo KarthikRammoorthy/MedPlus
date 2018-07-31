@@ -20,6 +20,8 @@ export const environment = {
   'postReviewbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/review',
   'getProductbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/product/2/',
   'getProductCategoryURL': 'https://medplusapi.herokuapp.com/MedPlus/product/category/',
+  'getReviewbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/review/'
+
 };
 
 /*

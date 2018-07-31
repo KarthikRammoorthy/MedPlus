@@ -8,5 +8,6 @@ export const environment = {
   'orderhistoryURL': 'https://medplusapi.herokuapp.com/MedPlus/orderhistory',
   'getUserbyMailURL': 'https://medplusapi.herokuapp.com/MedPlus/email/',
   'postReviewbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/review',
-  'getProductbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/product/2/'
+  'getProductbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/product/2/',
+  'getReviewbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/review/'
 };
