@@ -14,6 +14,7 @@ import {SearchresultComponent} from './searchresult/searchresult.component';
 import {FeedbackComponent} from './feedback/feedback.component';
 import {LogoutComponent} from './logout/logout.component';
 import {SearchbarComponent} from './searchbar/searchbar.component';
+import {DummyComponent} from './dummy/dummy.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,7 @@ const routes: Routes = [
   {path: 'feedback', component: FeedbackComponent},
   {path: 'logout', component: LogoutComponent},
   {path: 'searchbar', component: SearchbarComponent},
-
+  {path: 'dummy', component: DummyComponent}
 
 ];
 

@@ -23,6 +23,7 @@ export class RestService {
   postReviewbyProductURL = environment.postReviewbyProductURL;
   getproductDetailsURL =  environment.getProductbyProductURL;
   getProductCategoryUrl = environment.getProductCategoryURL;
+  deleteOrderHistoryURL = environment.deleteOrderHistoryURL;
 
 
   constructor(private  httpClient:  HttpClient) { }
@@ -88,6 +89,10 @@ export class RestService {
  getProductByCategory(category){
   console.log(`${this.getProductCategoryUrl}` + category);
   return  this.httpClient.get(`${this.getProductCategoryUrl}` + category);
+}
+
+deleteOrderHistory(id) {
+  return this.httpClient.delete(`${this.deleteOrderHistoryURL}` + '/' + id);
 }
 
 }

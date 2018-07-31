@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
 import { LocalStorageService } from 'angular-2-local-storage';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-order-history',
@@ -16,7 +17,7 @@ export class OrderHistoryComponent implements OnInit {
   
 
 
-  constructor(private localStorageService: LocalStorageService, private  restService:  RestService) { 
+  constructor(private localStorageService: LocalStorageService, private  restService:  RestService, private router: Router) { 
 
     this.GetUserDetails();
     this.displayOrderHistory();
@@ -38,6 +39,16 @@ export class OrderHistoryComponent implements OnInit {
   {
     this.listUser = this.localStorageService.get('user_object');
     this.userid = this.listUser.user_id;
+
+  }
+
+  DeleteOrderHistory(order: any){
+    if(confirm("Are you sure to delete this appointment?")) {
+    this.restService.deleteOrderHistory(order.order_id).subscribe((response: Response) => {
+      this.router.navigate(['dummy']);
+
+    });
+  }
 
   }
 
