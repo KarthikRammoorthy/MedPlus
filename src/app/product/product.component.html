@@ -7,9 +7,10 @@
     <div class="col-lg-6 col-6 col-sm-6 col-md-6">
       <h1 class="prodcut-heading">{{ productInfo.product_name }}</h1>
       <h2 class="product-price">${{ productInfo.product_price }}</h2><br>
+      <p class="product-desc"><b> Description </b></p>
       <p class="product-desc">{{ productInfo.product_information }}</p>
        <br><br>
-      <button mat-button type="button" id="12" (click)="buy($event)" class="btn btn-success">Buy Now</button>&nbsp;&nbsp;
+      <button mat-button type="button" id="12" (click)="buy($event)" class="btn btn-success" style="margin-bottom: 1%">Buy Now</button>&nbsp;&nbsp;
       <a> <button mat-button type="button" id="12" (click)="insertIntoCart()" class="btn btn-primary">Add to Cart</button></a>
       <br>
       <br>
