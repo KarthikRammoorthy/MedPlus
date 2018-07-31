@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
 import { LocalStorageService } from 'angular-2-local-storage';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-to-cart',
@@ -12,7 +13,7 @@ export class AddToCartComponent implements OnInit {
     id: String;
     listProducts: any;
     user: any;
-  constructor(private restService: RestService, private localStorageService: LocalStorageService) { 
+  constructor(private router: Router, private restService: RestService, private localStorageService: LocalStorageService) { 
   }
 
   ngOnInit() {
@@ -32,5 +33,13 @@ export class AddToCartComponent implements OnInit {
     this.restService.deleteItemFromCart(this.id).subscribe((response) => {
       this.loadCart(this.id);
     });
+  }
+
+  navigateToHome(){
+    this.router.navigate(['/home'], {queryParams: {}});
+  }
+
+  navigateToCheckout(){
+    this.router.navigate(['/buy'], {queryParams: {}});
   }
 }
