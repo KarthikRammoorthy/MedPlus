@@ -25,6 +25,11 @@ export class SearchresultComponent implements OnInit {
   ngOnInit() {
   }
 
+  productinfo(){
+    this.router.navigate(['/product'], {queryParams: {}});
+    // this.router.navigateByUrl(url);
+  }
+
   displaySearchResult(searchterm: string) {
     this.restService.getProductByName(searchterm).subscribe((response:Response) => {
 
@@ -36,8 +41,8 @@ export class SearchresultComponent implements OnInit {
       alert("No Products found by this name/category.");
       }
       else {
+       
         this.localStorageService.set('product_object',this.listProducts);
-
       }
 
   });

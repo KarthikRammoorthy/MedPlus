@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { RestService } from '../rest.service';
+import { LocalStorageService } from 'angular-2-local-storage';
 
 
 
@@ -15,54 +16,55 @@ export class ProductComponent implements OnInit {
   id: String;
   userId: String;
   quantity: String;
-  product : any;
+  product: any;
+  user: any;
 
 
-  constructor(private route: ActivatedRoute, private restService: RestService) {
+  constructor(private router: Router, private route: ActivatedRoute, private restService: RestService; private localStorageService: LocalStorageService) {
     // this.productId = this.route.snapshot.params.param1;
   }
 
   ngOnInit() {
-    this.Product(12);
-    this.userId = "2";
-    this.productId = "12";
-    this.quantity = "2"
-
+    //this.Product(12);
+    this.user = this.localStorageService.get('user_object');
+    this.id = this.user.user_id;
+    this.product = this.localStorageService.get('product_object')[0];
   }
 
-  Product(id){
-    this.restService.getProduct(id).subscribe((response) => {
-      this.product = response;
-      console.log(this.product);
-    });
-  }
+  // Product(id){
+    // this.restService.getProduct(id).subscribe((response) => {
+      // this.product = response;
+      // console.log(this.product);
+    // });
+  // }
 
   
-insertIntoCart(){
-  const ob = {
-    'user_id':this.userId,
-    'product_id':this.productId,
-    'quantity':this.quantity
-  }
-   this.restService.insertCart(ob).subscribe((response) =>{
-     console.log(response)
-   });
+insertIntoCart() {
+  this.productId = event.target.id;
+  
+  const obj = {
+    'productId': this.productId,
+    'userId': this.id
+  };
+  console.log(obj);
+  
+  this.restService.buyProduct(obj).subscribe((response) => {
+    this.router.navigate(['/cart'], {queryParams: {}});
+  });
  }
  
 
   buy(event) {
     this.productId = event.target.id;
-    console.log(event);
-    console.log(this.productId);
     
     const obj = {
-      'productId': '12',
-      'userId': '1'
+      'productId': this.productId,
+      'userId': this.id
     };
     console.log(obj);
     
     this.restService.buyProduct(obj).subscribe((response) => {
-      alert(response);
+      this.router.navigate(['/buy'], {queryParams: {}});
     });
   }
 }

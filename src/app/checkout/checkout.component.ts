@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LocalStorageService } from 'angular-2-local-storage';
 
 @Component({
   selector: 'app-checkout',
@@ -14,11 +15,13 @@ export class CheckoutComponent implements OnInit {
   user: any;
   paymentForm: FormGroup;
 
-  constructor(private restService: RestService) { }
+  constructor(private restService: RestService, private localStorageService: LocalStorageService) { }
 
   ngOnInit() {
-    this.loadCart(1);
-    this.loadUserAddress(1);
+    this.user = this.localStorageService.get('user_object');
+    this.id = this.user.user_id;
+    this.loadCart(this.id);
+    // this.loadUserAddress(1);
     this.paymentForm = new FormGroup({
       cardNumber: new FormControl('', [Validators.required,
         Validators.pattern('^[0-9]{16}$')]),
@@ -36,31 +39,31 @@ loadCart(id) {
   });
 }
 
-loadUserAddress(id) {
-  this.restService.loadUserDetails(id).subscribe((response) => {
-    this.user = response;
-  });
-  this.loadCart(1);
-}
+// loadUserAddress(id) {
+  // this.restService.loadUserDetails(id).subscribe((response) => {
+   // this.user = response;
+  // });
+  // this.loadCart(1);
+// }
 
 delete(event) {
   this.id = event.target.id;
   this.restService.deleteItemFromCart(this.id).subscribe((response) => {
-    this.loadCart(1);
+    this.loadCart(this.id);
   });
 }
 
 onFormSubmit() {
   const obj = {
     'listProducts': this.listProducts,
-    'userId': '1'
+    'userId': this.id;
   };
-
+  this.paymentForm.reset();
   if (this.listProducts.length === 0) {
     alert('No product present in Cart');
   } else {
     this.restService.orderUpdateFunct(obj).subscribe((response) => {
-      this.loadCart(1);
+      this.loadCart(this.id);
       alert('Order placed succesfully');
     });
   }
