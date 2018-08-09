@@ -12,10 +12,16 @@
     align-content: center;
 
 }
+.decoration {
+    text-decoration: overline underline;
+    text-decoration-line: overline underline;
+    text-decoration-color: brown;
+}
 
 .container {
     padding: 0 1.2em;
     margin: auto;
-    margin-top: 1em;
     margin-bottom: 1em;
+    margin-top: 1em;
+
   }

@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>User Details</h2>
+<mat-dialog-content class="error">
+    <input matInput [(ngModel)]="data.user_firstname">
+    <input matInput [(ngModel)]="data.user_lastname">
+    <input matInput [(ngModel)]="data.user_email">
+    <input matInput [(ngModel)]="data.user_phone">
+    <input matInput [(ngModel)]="data.user_suite">
+    <input matInput [(ngModel)]="data.user_street">
+    <input matInput [(ngModel)]="data.user_city">
+    <input matInput [(ngModel)]="data.user_state">
+    <input matInput [(ngModel)]="data.user_country">
+    <input matInput [(ngModel)]="data.user_zip">
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="closeDialog()">Ok</button>
+</mat-dialog-actions>

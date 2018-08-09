@@ -2,10 +2,12 @@ import { FormGroup } from '@angular/forms';
 
  
 
+
 export class RegistrationValidator {
-    static validate(registerForm: FormGroup) {
-        let password = registerForm.controls.password.value;
-        let repeatPassword = registerForm.controls.reenterpassword.value;
+    static validate(registrationFormGroup: FormGroup) {
+        let password = registrationFormGroup.controls.password.value;
+        let repeatPassword = registrationFormGroup.controls.reenterpassword.value;
+        
  
         if (repeatPassword.length <= 0) {
             return null;
@@ -13,12 +15,12 @@ export class RegistrationValidator {
  
         if (repeatPassword !== password) {
             return {
-                doesMatchPassword: true
+                doesNotMatchPassword: true
             };
         }
- 
+         
         return null;
  
-    }
+    }    
 
 }

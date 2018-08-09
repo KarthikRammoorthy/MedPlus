@@ -42,6 +42,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { LogoutComponent } from './logout/logout.component';
 import { Dummy2Component } from './dummy2/dummy2.component';
 import { DummyComponent } from './dummy/dummy.component';
+import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 @NgModule({
@@ -66,6 +68,8 @@ import { DummyComponent } from './dummy/dummy.component';
     LogoutComponent,
     Dummy2Component,
     DummyComponent,
+    UpdateprofileComponent,
+    DialogComponent,
   ],
   imports: [
     MatInputModule,
@@ -90,6 +94,9 @@ import { DummyComponent } from './dummy/dummy.component';
   }),
   ],
   providers: [],
+  entryComponents: [
+    DialogComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -24,7 +24,7 @@
             <p class="bg-danger" *ngIf="registerForm.controls.emailid.errors?.required  && registerForm.controls.emailid.touched">Please enter email id</p>
             <p class="bg-danger" *ngIf="registerForm.controls.emailid.errors?.pattern  && registerForm.controls.emailid.touched">Please enter email id in valid format </p>
               
-            <div [formGroup]='passwordGroup' fxLayout ="column">
+           <!--  <div [formGroup]='passwordGroup' fxLayout ="column">
             <mat-form-field>
                 <input type="password" matInput placeholder="Enter your password" formControlName="password"  required> 
                 <mat-hint>Password must contain a minimum of 8 letters</mat-hint> 
@@ -37,7 +37,21 @@
                 <input type="password" matInput placeholder="Reenter password" formControlName="reenterpassword"  required>   
             </mat-form-field>
             <p class="bg-danger" *ngIf="passwordGroup.errors?.doesNotMatchPassword && passwordGroup.controls.reenterpassword.touched">Password does not match</p>
-        </div>
+        </div> -->
+        <div [formGroup]='passwordGroup' fxLayout ="column">
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Enter your password" formControlName="password"  required> 
+                    <mat-hint>Password must contain a minimum of 8 letters</mat-hint> 
+                </mat-form-field>
+                <p class="bg-danger" *ngIf="passwordGroup.controls.password.errors?.required && passwordGroup.controls.password.touched">Please enter password</p>
+                <p class="bg-danger" *ngIf="passwordGroup.controls.password.errors?.pattern && passwordGroup.controls.password.touched">Please enter strong password</p>
+
+                <br/>
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Reenter password" formControlName="reenterpassword"  required>   
+                </mat-form-field>
+                <p class="bg-danger" *ngIf="passwordGroup.errors?.doesNotMatchPassword && passwordGroup.controls.reenterpassword.touched">Password does not match</p>
+            </div>
 
 
       

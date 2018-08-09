@@ -1,7 +1,11 @@
 <div class="container">
   <nav class="navigation" fxLayout ="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center stretch" fxLayoutGap.xs="5px">
-      <a mat-stroked-button routerLink="/home" fxFlex="10">Home</a>
-      <a *ngIf="isUserLoggedIn" mat-stroked-button routerLink="/orderhistory" fxFlex="20">Dashboard</a>
+
+        <b fxFlex fxFlex.xs = "10" fxLayoutAlign.xs="center" class="decoration" > MedPlus </b>
+
+    <a mat-stroked-button routerLink="/home" fxFlex="10">Home</a>
+      <a *ngIf="isUserLoggedIn" mat-stroked-button routerLink="/orderhistory" fxFlex="10">Dashboard</a>
+      <a *ngIf="isUserLoggedIn" mat-stroked-button routerLink="/update" fxFlex="10">Update</a>
       
       <div fxFlex="50" fxFlexOrder.xs ="6">
       <form (ngSubmit) = "doSearch()" class="navigationsearch" ngNativeValidate> 
@@ -18,3 +22,4 @@
       
   </nav>
   </div>
+  

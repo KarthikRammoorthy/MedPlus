@@ -4,6 +4,8 @@ import { AbstractControl, FormGroupDirective, FormBuilder, FormControl, Validato
 import { RegistrationValidator } from '../register/register.validator';
 import { RestService } from '../rest.service';
 import { Router } from '@angular/router';
+import { DialogComponent } from '../dialog/dialog.component';
+import {MatDialog} from "@angular/material";
 
 
 
@@ -34,19 +36,23 @@ export class RegisterComponent implements OnInit {
 
 
 
-  constructor(private formBuilder: FormBuilder, private restService: RestService, private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private restService: RestService, private router: Router,public dialog : MatDialog) { }
 
 
 
 
 ngOnInit() {
 
+
+
   this.passwordGroup = this.formBuilder.group({
-    password: ['', Validators.required],
-    reenterpassword: ['', Validators.required]
+    password:  ['', [Validators.required,  Validators.pattern(this.passwordPattern) ]],
+    reenterpassword:   ['',  Validators.required],
   }, {
     validator: RegistrationValidator.validate.bind(this)
   });
+
+
   this.registerForm = this.formBuilder.group({
     firstname : ['',Validators.required],
     lastname : ['',Validators.required],
@@ -77,19 +83,22 @@ var user = {
   user_country: this.registerForm.get('country').value,
   user_zip: this.registerForm.get('zip').value
 }
-if(confirm("Please exercise care while using this application. Confirm to Continue")) {
+
 this.restService.createUser(user).subscribe((response) => {
   console.log(response);
-  
-  alert("Registration Successful");
-    this.router.navigate(['login']);
+  this.showDetails(user); 
+  //alert("Registration Successful");
+    //this.router.navigate(['login']);
   
 });
 }
-else {
-  this.router.navigate(['home']);
+
+showDetails(user : any) : void {
+  this.dialog.open(DialogComponent, {
+    data: user ,width : '250px'
+  });
 }
-}
+
 }
 
 

@@ -17,5 +17,7 @@ export const environment = {
   'getProductbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/product/2/',
   'getReviewbyProductURL': 'https://medplusapi.herokuapp.com/MedPlus/review/',
   'getProductCategoryURL': 'https://medplusapi.herokuapp.com/MedPlus/product/category/',
-  'deleteOrderHistoryURL': 'https://medplusapi.herokuapp.com/MedPlus/deletehistory/'
+  'deleteOrderHistoryURL': 'https://medplusapi.herokuapp.com/MedPlus/deletehistory/',
+  'updateUserURL': 'https://medplusapi.herokuapp.com/MedPlus/updateUser/',
+  'getUserByIDURL': 'https://medplusapi.herokuapp.com/MedPlus/user/',
 };

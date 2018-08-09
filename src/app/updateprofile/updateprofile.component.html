@@ -1,0 +1,95 @@
+<div class="container">
+    <mat-card>
+      <mat-card-title fxLayoutAlign="center">
+        Update Details
+      </mat-card-title>
+      <mat-card-content>
+            
+            <form [formGroup]='updateForm' fxLayout ="column"  novalidate>
+  
+              <mat-form-field>
+                <input matInput placeholder="Enter your first name" formControlName="firstname" [(ngModel)] = "source.user_firstname"  required>
+                
+              </mat-form-field>
+              <p class="bg-danger" *ngIf="updateForm.controls.firstname.errors?.required && updateForm.controls.firstname.touched">Please enter valid first name</p>
+  
+            <mat-form-field>
+                <input matInput placeholder="Enter your last name" formControlName="lastname" [(ngModel)] = "source.user_lastname" required>      
+            </mat-form-field>
+            <p class="bg-danger" *ngIf="updateForm.controls.lastname.errors?.required && updateForm.controls.lastname.touched">Please enter valid last name</p>
+    
+            <mat-form-field>
+                <input matInput placeholder="Enter your email id" formControlName="emailid" [(ngModel)] = "source.user_email" required>
+            </mat-form-field>
+            <p class="bg-danger" *ngIf="updateForm.controls.emailid.errors?.required  && updateForm.controls.emailid.touched">Please enter email id</p>
+            <p class="bg-danger" *ngIf="updateForm.controls.emailid.errors?.pattern  && updateForm.controls.emailid.touched">Please enter email id in valid format </p>
+              
+        <div [formGroup]='passwordGroup' fxLayout ="column">
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Enter your password" formControlName="password"  [(ngModel)] = "source.user_password" required> 
+                    <mat-hint>Password must contain a minimum of 8 letters</mat-hint> 
+                </mat-form-field>
+                <p class="bg-danger" *ngIf="passwordGroup.controls.password.errors?.required && passwordGroup.controls.password.touched">Please enter password</p>
+                <p class="bg-danger" *ngIf="passwordGroup.controls.password.errors?.pattern && passwordGroup.controls.password.touched">Please enter strong password</p>
+
+                <br/>
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Reenter password" formControlName="reenterpassword" [(ngModel)] = "source.user_password"  required>   
+                </mat-form-field>
+                <p class="bg-danger" *ngIf="passwordGroup.errors?.doesNotMatchPassword && passwordGroup.controls.reenterpassword.touched">Password does not match</p>
+            </div>
+
+
+      
+        <mat-form-field>
+          <input matInput placeholder="Contact Number" formControlName="phone" [(ngModel)] = "source.user_phone"  required>
+      </mat-form-field>
+      <p class="bg-danger" *ngIf="updateForm.controls.phone.errors?.required && updateForm.controls.phone.touched">Please enter phone number</p>
+      <p class="bg-danger" *ngIf="updateForm.controls.phone.errors?.pattern && updateForm.controls.phone.touched">Please enter valid phone number</p>
+  
+            <mat-form-field>
+                <input matInput placeholder="Suite Number" formControlName="suite" [(ngModel)] = "source.user_suite"  required>
+            </mat-form-field>
+            <p class="bg-danger" *ngIf="updateForm.controls.suite.errors?.required && updateForm.controls.suite.touched">Please enter Suite number</p>
+            <p class="bg-danger" *ngIf="updateForm.controls.suite.errors?.pattern && updateForm.controls.suite.touched">Only Numbers Please!</p>
+  
+            <mat-form-field>
+                    <input matInput placeholder="Street Name" formControlName="street" [(ngModel)] = "source.user_street"  required>
+                </mat-form-field>
+                <p class="bg-danger" *ngIf="updateForm.controls.street.errors?.required && updateForm.controls.street.touched">Please enter Street Name</p>
+            
+            
+            <mat-form-field>
+                        <input matInput placeholder="City" formControlName="city" [(ngModel)] = "source.user_city"  required>
+                    </mat-form-field>
+                    <p class="bg-danger" *ngIf="updateForm.controls.city.errors?.required && updateForm.controls.city.touched">Please enter City Name</p>
+                 
+                    <mat-form-field>
+                      <input matInput placeholder="State" formControlName="state" [(ngModel)] = "source.user_state"  required>
+                  </mat-form-field>
+                  <p class="bg-danger" *ngIf="updateForm.controls.state.errors?.required && updateForm.controls.state.touched">Please enter State Name</p>
+                  
+                   
+            <mat-form-field>
+                <input matInput placeholder="Country" formControlName="country" [(ngModel)] = "source.user_country"  required>
+            </mat-form-field>
+            <p class="bg-danger" *ngIf="updateForm.controls.country.errors?.required && updateForm.controls.country.touched">Please enter Country Name</p>
+         
+  
+             <mat-form-field>
+                            <input matInput placeholder="Zip Code" formControlName="zip" [(ngModel)] = "source.user_zip"  required>
+                            <mat-hint>Format ### ###</mat-hint>
+                        </mat-form-field>
+                        <p class="bg-danger" *ngIf="updateForm.controls.zip.errors?.required && updateForm.controls.zip.touched">Please enter Zip Code</p>
+                        <p class="bg-danger" *ngIf="updateForm.controls.zip.errors?.pattern && updateForm.controls.zip.touched">Please enter valid Zip Code</p>
+                     
+  
+  
+          </form>
+       
+      </mat-card-content>
+      <mat-card-actions fxLayoutAlign="center">
+        <button  mat-button type="submit" (click)="onClickRegister()" [disabled]="!updateForm.valid">Update</button>
+      </mat-card-actions>
+    </mat-card>
+    </div>

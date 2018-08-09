@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-lg-4 col-4 col-sm-4 col-md-4 center-block">
       <br><br>
@@ -20,6 +20,23 @@
     </div>
   </div>
 </div>
+ -->
+<div class="container"fxLayout ="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center stretch" fxLayoutGap = "10px" fxLayoutGap.xs="10px">
+    <img fxFlex="10" src="{{ productInfo.product_url }}">
+    <mat-card fxFlex="10">
+        <h4 style="color: brown; text-align: center">{{ productInfo.product_name }}</h4>
+        <h5 style="color:blue; text-align: center">${{ productInfo.product_price }}</h5>
+        <p style="text-align: center"><b> Description </b></p>
+        <p style="justify-content: center">{{ productInfo.product_information }}</p>
+
+    </mat-card>
+    <div fxFlex = "30">
+        <button mat-button type="button"  (click)="buy($event)" class="btn btn-success" style="margin-bottom: 1%">Buy Now</button>&nbsp;&nbsp;
+        <a> <button mat-button type="button"  (click)="insertIntoCart()" class="btn btn-primary" style="margin-bottom: 1%">Add to Cart</button></a> &nbsp;&nbsp;
+        <button mat-button type="button" (click)="NavigateToFeedback()" class="btn btn-warning" >Feedback</button>
+    </div>
+
+    </div>
 <!-- <div class="reviews">
   <h1 class="review-heading">Reviews</h1>
   <hr class="hr-css">

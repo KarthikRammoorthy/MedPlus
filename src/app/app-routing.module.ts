@@ -16,6 +16,7 @@ import {LogoutComponent} from './logout/logout.component';
 import {SearchbarComponent} from './searchbar/searchbar.component';
 import { Dummy2Component } from './dummy2/dummy2.component';
 import {DummyComponent} from './dummy/dummy.component';
+import {UpdateprofileComponent} from './updateprofile/updateprofile.component';
 
 
 const routes: Routes = [
@@ -34,7 +35,8 @@ const routes: Routes = [
   {path: 'dummy2', component: Dummy2Component},
 
 
-  {path: 'dummy', component: DummyComponent}
+  {path: 'dummy', component: DummyComponent},
+  {path: 'update', component: UpdateprofileComponent}
 
 ];
 

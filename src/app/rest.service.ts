@@ -25,6 +25,8 @@ export class RestService {
   getProductCategoryUrl = environment.getProductCategoryURL;
   getReviewbyProductURL= environment.getReviewbyProductURL;
   deleteOrderHistoryURL = environment.deleteOrderHistoryURL;
+  updateUserURL = environment.updateUserURL;
+  getUserByIDURL = environment.getUserByIDURL;
 
 
   constructor(private  httpClient:  HttpClient) { }
@@ -32,6 +34,11 @@ export class RestService {
   createUser(user){
 
     return  this.httpClient.post(`${this.InsertURL}`, user);
+  }
+
+  updateUser(user){
+
+    return  this.httpClient.post(`${this.updateUserURL}`, user);
   }
 
   login(){
@@ -82,6 +89,9 @@ export class RestService {
  getUserbyMail(user_Email) {
    return  this.httpClient.get(`${this.getUserbyMailURL}/${user_Email}`);
  }
+ getUserbyID(user_id) {
+  return  this.httpClient.get(`${this.getUserByIDURL}/${user_id}`);
+}
 
  postReviewbyProduct(feedback) {
    return  this.httpClient.post(`${this.postReviewbyProductURL}`, feedback);

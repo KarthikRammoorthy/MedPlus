@@ -47,7 +47,7 @@
     <!--/.Carousel Wrapper-->
     </div>
   
-    <div class="infoDiv">
+   <!--  <div class="infoDiv">
         <div class="tabDiv">
             <p style="font-weight: bold; text-align: center; padding-bottom: 80%; width: 100%"> Ear Drops</p>
             <p style="font-weight: bold; margin-left: 48%"> Price</p>
@@ -57,7 +57,7 @@
               <p>{{ product.product_name }}</p>  
               <p>$ {{ product.product_price }}</p>
     </div>
-  
+  </div>
     <div class="infoDiv">
         <div class="tabDiv">
             <p style="font-weight: bold; text-align: center; padding-bottom: 80%; width: 100%"> Eye Drops</p>
@@ -68,9 +68,33 @@
               <p>{{ product.product_name }}</p>  
               <p>$ {{ product.product_price }}</p>
             </div>
-    </div>
-    <div>
-    </div>
+    </div> -->
+
+    <div class="container" fxLayout = "row" fxLayout.xs = "column" fxLayoutGap="10px">
+            <mat-card *ngFor="let product of earProducts">
+                <mat-card-content>
+                  <img src={{product.product_url}} class="img" alt="?" (click) = "NavigateProductInfo(product)">
+                  <p style="align-content: center;">{{ product.product_name }}</p>  
+                  <p>$ {{ product.product_price }}</p>
+                </mat-card-content>
+            </mat-card>
+
+        </div>
+
+        <div class="infoDiv">
+                <div class="tabDiv">
+                    <p style="font-weight: bold; color: red; text-align: center; padding-bottom: 80%; width: 100%"> SALE</p>
+                    <p style="font-weight: bold; margin-left: 48%"> 50% OFF</p>
+                </div>
+                <div class="tabDiv" *ngFor="let product of eyeProducts">
+                      <img src={{product.product_url}} class="img" alt="?" (click) = "NavigateProductInfo(product)" >
+                      <p>{{ product.product_name }}</p>  
+                      <p>$ {{ product.product_price }}</p>
+                    </div>
+            </div>
+  
+    
+
   
   
   
