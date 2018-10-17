@@ -1,4 +1,4 @@
-.container {
+/* .container {
     padding: 0 1.2em;
     margin: auto;
     margin-top: 2em;
@@ -22,4 +22,64 @@
     .content-text {
         column-count: 2;
     }
+} */
+
+/************************************************************/
+
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.carousel-control     		 { width:  4%; }
+.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+@media (max-width: 767px) {
+	.carousel-inner .active.left { left: -100%; }
+	.carousel-inner .next        { left:  100%; }
+	.carousel-inner .prev		 { left: -100%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+
 }
+@media (min-width: 767px) and (max-width: 992px ) {
+	.carousel-inner .active.left { left: -50%; }
+	.carousel-inner .next        { left:  50%; }
+	.carousel-inner .prev		 { left: -50%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+	.active > div:first-child + div { display:block; }
+}
+@media (min-width: 992px ) {
+	.carousel-inner .active.left { left: -16.7%; }
+	.carousel-inner .next        { left:  16.7%; }
+	.carousel-inner .prev		 { left: -16.7%; }
+}
+
+/***************************************************/
+.tabDiv {
+  max-width: 20%;
+  padding: 0 4px;
+  display: inline-block;
+  margin-left: 6%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 8%;
+  cursor: pointer;
+}
+.tabDiv p{
+  margin-top: 8%;
+  margin-left: 27%;
+}
+.infoDiv{
+  margin: 3%;
+  border: solid #D3D3D3;
+}
+.eyeDrops{
+  margin-left: 20%;
+}
+
+
+
+
+/*************************************************************/
+
+
+

@@ -1,0 +1,33 @@
+<div class="container" fxLayout ="column" fxLayoutGap = "5px">
+  <mat-card  *ngFor="let product of listProducts">  
+    <mat-card-header>
+        <mat-card-title class="example-card"> Product : {{product.product_name}}</mat-card-title>
+        <mat-card-subtitle>Category : {{product.product_category}}</mat-card-subtitle>
+      </mat-card-header>
+     
+      <mat-card-content fxLayout ="row" fxLayout.xs ="column" fxLayoutGap="5px">
+          <span fxFlex="50%" fxFlex.xs ="100%">
+        <img style="height: 75%; width: 75%;" src="{{ product.product_url }}">
+  </span>
+        <span fxFlex="50%" fxFlex.xs ="100%">
+        Price Per Quantity : $  {{product.product_price}}
+        </span>
+        <span fxFlex="50%" fxFlex.xs ="100%"> 
+        Available Quantity : {{product.product_quantity}}
+        </span>
+        <mat-card-actions fxLayout ="row" fxLayout.xs ="column" fxLayoutGap="5px" fxLayoutAlign="center">
+            <span fxFlex="100%" fxFlex.xs ="100%">
+    
+              <button mat-stroked-button (click)="NavigateProductInfo(product)" class="btn btn-info"> Product Info
+              <mat-icon>
+                  info             
+              </mat-icon>
+          </button>
+          </span>
+          </mat-card-actions>
+      </mat-card-content>
+      
+    </mat-card>
+    
+  </div>
+    

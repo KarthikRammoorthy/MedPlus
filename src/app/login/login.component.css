@@ -1,0 +1,31 @@
+.main{
+  margin-left: 30%;
+  margin-top:10%;
+  margin-bottom:10%;
+}
+
+.container {
+  padding: 0 1.2em;
+  margin: auto;
+  margin-top: 2em;
+}
+
+
+.header{
+  border:solid #6799a3;
+  background: #6799a3;
+  color: white;
+  width: 60%;
+  padding: 1%;
+}
+.login{
+  border:solid #6799a3;
+  width: 60%;
+}
+.form-control{
+  width:50%;
+  margin-left:10%;
+}
+
+
+

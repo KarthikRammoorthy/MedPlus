@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from '../rest.service';
+import { LocalStorageService } from 'angular-2-local-storage';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-order-history',
@@ -7,16 +10,48 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderHistoryComponent implements OnInit {
 
- Orders = [
-    {id: 1, name:'Paracetamol', orderdate:'12 January 2018', ordernumber:'12341dskjfn123', quantity: 10, price:'$122'},
-    {id: 1, name:'Volini', orderdate:'12 January 2018', ordernumber:'12341dskjfn123', quantity: 10, price:'$122'},
-    {id: 1, name:'Paracetamol', orderdate:'12 January 2018', ordernumber:'12341dskjfn123', quantity: 10, price:'$122'},
-    {id: 1, name:'Paracetamol', orderdate:'12 January 2018', ordernumber:'12341dskjfn123', quantity: 10, price:'$122'},
-    {id: 1, name:'Paracetamol', orderdate:'12 January 2018', ordernumber:'12341dskjfn123', quantity: 10, price:'$122'}
-];
-  constructor() { }
+
+  listUser: any;
+  private userid:  String = "";
+  listOrderHistory: any;
+  
+
+
+  constructor(private localStorageService: LocalStorageService, private  restService:  RestService, private router: Router) { 
+
+    this.GetUserDetails();
+    this.displayOrderHistory();
+  }
+
 
   ngOnInit() {
   }
+
+  displayOrderHistory() {
+    this.restService.getOrderHistory(this.userid).subscribe((response:Response) => {
+
+      this.listOrderHistory = response;
+
+  });
+}
+
+  GetUserDetails()
+  {
+    this.listUser = this.localStorageService.get('user_object');
+    this.userid = this.listUser.user_id;
+
+  }
+
+  DeleteOrderHistory(order: any){
+    if(confirm("Are you sure to delete this appointment?")) {
+    this.restService.deleteOrderHistory(order.order_id).subscribe((response: Response) => {
+      this.router.navigate(['dummy']);
+
+    });
+  }
+
+  }
+
+
 
 }

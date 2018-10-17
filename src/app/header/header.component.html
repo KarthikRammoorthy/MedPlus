@@ -1,6 +1,66 @@
-<header id="header">
+<!-- <header id="header">
   <div class="header_backgroundimage" [ngStyle]="{'background-image': 'url(assets/images/Carousel3.jpg)'}"></div>
   <div class="container">
   <h1> Med+</h1>
   </div>
-  </header>
+  </header> -->
+
+
+
+<!--   <nav class="navbar navbar-expand-md navbar-dark" routerLinkActive="active">
+   
+    <a class="navbar-brand" href="#">Med +</a>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <form class="form-inline my-2 my-lg-0" (ngSubmit) = "doSearch()" ngNativeValidate>
+        <input class="form-control mr-sm-2" type="search" [(ngModel)]= "searchterm" name ="searchterm"
+          placeholder="Search"  aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+      </form>
+
+      <ul class="navbar-nav float-left">
+        <li class="nav-item active"><a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+        </a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="login">Login</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" routerLink="register">Register</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" routerLink="orderhistory">Order History</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" routerLink="product">Product</a>
+        </li>
+      </ul>
+    </div>
+  </nav> -->
+
+  <header id="header">
+    <div class="header_backgroundimage"></div>
+    <div class="container">
+    <h1> MedPlus</h1>
+    </div>
+    </header>
+<!--     
+  <div class="container">
+    <nav class="navigation" fxLayout ="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center stretch" fxLayoutGap.xs="5px">
+        <a mat-stroked-button routerLink="/home" fxFlex="10">Home</a>
+        <a *ngIf="isUserLoggedIn" mat-stroked-button routerLink="/orderhistory" fxFlex="20">Dashboard</a>
+        
+        <div fxFlex="40" fxFlexOrder.xs ="6">
+        <form (ngSubmit) = "doSearch()" class="navigationsearch" ngNativeValidate> 
+            <input type="text" [(ngModel)]= "searchterm" name ="searchterm" placeholder="Search Doctors.." required>
+            <button type="submit"> 
+             <mat-icon>search</mat-icon>
+            </button>
+          </form>
+        </div>
+    
+        <a *ngIf="!isUserLoggedIn" mat-stroked-button fxFlex="10" routerLink="/register">Register</a>
+        <a *ngIf="!isUserLoggedIn" mat-stroked-button fxFlex="10" routerLink="/login">Login</a>
+        <a *ngIf="isUserLoggedIn" mat-stroked-button fxFlex="10" routerLink="/logout">Logout</a>
+        
+    </nav>
+    </div> -->
+
+
+
